@@ -1,6 +1,7 @@
 body{
     margin: 0;
-    background-color: #eff0f4;   
+    background-color: #eff0f4;
+     
 }
 .h{
     height:55px;
@@ -8,21 +9,24 @@ body{
     background-color: #5fc0cd;
     color:#e1f3f6;
     text-align:center;
-}
+  }/*顶部*/
+
 .a{
     float: left;
     line-height: 60px;
     margin-left: 15px;    
-}
+}/*关闭*/
+
 .b{
     font-size: 19px;
     line-height: 60px;
-}
+}/*登录*/
+
 .c{
    float:right;
    line-height: 63px;
    margin-right: 15px;   
-}
+}/*注册*/
 
 
 
@@ -30,9 +34,12 @@ body{
 
 .d{
     height:38px;
+    width:100%;
     background-color: #ffffff;
     line-height: 46px;
     margin:6px 0 8px 0;
+    position: relative;
+    overflow: hidden;
 }  
 .iphone{   
     margin-left:20px;
@@ -61,10 +68,10 @@ input{
     left:80px;
     letter-spacing: 0.08em;
     margin-top: 10px;
-    outline:none;
+    outline:none;/*输入框*/
   
 }
-input::-webkit-input-placeholder{ color:#eaedee}
+input::-webkit-input-placeholder{ color:#eaedee}/*输入框的默认字体颜色设置*/
 
 
    
@@ -85,8 +92,7 @@ input::-webkit-input-placeholder{ color:#eaedee}
 
 button{
     outline:none;
-        border:none;
-        border: none;
+    border:none;
     background-color: #5fc0cd;
     color:#f3f4f6;      
 }
