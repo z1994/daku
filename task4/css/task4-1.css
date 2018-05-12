@@ -52,14 +52,14 @@ body{
     border-left: 1px solid #eaedee;
     position: absolute;
     left: 56px;
-    top:68px;
+    top:6px;
 }
 .down{
     padding: 11px;
     border-left: 1px solid #eaedee;
     position: absolute;
     left: 56px;
-    top:114px;
+    top:7px;
 }
 input{
     position: absolute;
