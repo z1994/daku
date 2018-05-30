@@ -61,7 +61,6 @@ body {
 }
 
 .play {
-    display: inline-block;
     float: right;
     margin-top: 0.27rem;
     background: url(../img/img66.png)no-repeat 0 101%/76%;
