@@ -23,13 +23,28 @@ body {
     width: 26px;
     margin:0.46rem 0 0 0.6rem;
 }
-
-.shut {
-    background: url(../img/img66.png)no-repeat 0 85%/100%;
-    height: 32px;
-    width: 26px;
-    margin:0.46rem 0.32rem 0 0;
+.shut{ 
+    display: inline-block; 
+    margin: 1rem 0.5rem 0 0;
+    width: 23px;
+    height:3px;
+    background: #ffffff;
+    line-height: 0;
+    font-size:0;
+    vertical-align: middle;
+    -webkit-transform: rotate(45deg);
 }
+.shut:after{
+    content:'/';
+    display:block;
+    width: 23px;
+    height:3px; 
+    background: #ffffff;
+    -webkit-transform: rotate(-90deg);
+}
+
+
+
 
 /*  ------------------------------------------------------- */
 
@@ -75,7 +90,7 @@ body {
 
 main {
     display: block;
-    margin-bottom: 33.8rem;
+    margin-bottom: 38rem;
 }
 
 .box {
@@ -100,7 +115,7 @@ main {
     font-size: 0.9rem;
 }
 
-.box-b {
+.box-foot {
     display: block;
     text-align: center;
     line-height: 4vw;
@@ -112,17 +127,17 @@ main {
 
 /* ================================= */
 
-.box-c {
+.box-picture {
     display: none;
 }
-.box-d {
+.picture {
     position: absolute;
     display: flex;
     justify-content: space-between;
     margin: 3.5% 0 0 5.3%;
     width: 22.6vw;
 }
-.box-a:hover~.box-c {
+.box-a:hover~.box-picture {
     display: block;
 }
 

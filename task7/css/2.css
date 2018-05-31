@@ -43,11 +43,11 @@ header{
     margin-top: 0.7rem;
     height: 6.6rem;
 }
-.font-a{
+.content-box{
     margin: 1rem auto;
     width: 72%;
 }
-.font-b{
+.content{
     font-size: 1.1rem;
     color: #ffc865;
 }
@@ -60,7 +60,7 @@ ul{
     font-size: 0.85rem;
     color:#fff;
 }
-.font-c{
+.thenes{
     display: inline-block;
     margin-right: 1rem;
 }
@@ -81,7 +81,7 @@ h4{
     margin: 0.3rem 0 0.3rem 2.88rem;
     font-weight: 500;
 }
-.font-d{
+.master{
     float: right;
     margin: 0.58rem 2.8rem 0 0;
     font-size: 0.7rem;

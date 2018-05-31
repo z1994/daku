@@ -11,11 +11,16 @@ header{
     background: #29bde0;
 }
 .list{
-    display: inline-block;
-    background:url(../img/img3.png)no-repeat -55% 77%/150%;
-    margin: 0.25rem 0 0 0.2rem;
-    height:27px;
-    width:34px;
+    position: absolute;
+    top: 0.7rem;
+    left: 0.5rem;
+    width: 22px;  
+    height: 2px;  
+    border-top: 2.5px solid #fff;  
+    border-bottom: 2.5px solid #fff;  
+    background-color: #fff;  
+    padding: 5px 0;  
+    background-clip:content-box;
 }
 /* ======================================================== */
 .second{
@@ -31,10 +36,14 @@ header{
     background: #fff;
 }
 .back{
-    float: right;
-    background: url(../img/img3.png)no-repeat -8% -23%/164%;
-    height:50px;
-    width:29px;
+    position: absolute;
+    right: 2rem;
+    top: 5.5rem;
+    width: 12px;  
+    height: 12px;    
+    border-left: 2px solid #e7e7e7;  
+    border-bottom: 2px solid #e7e7e7;   
+    transform: translate(0,-50%) rotate(-135deg);
 }
 
 /* ======================================================= */
@@ -52,7 +61,7 @@ ul{
 li{
     list-style: none;
 }
-.row-a{
+.title{
     display:block;
     border-bottom: solid 1px #fbb435;
     text-align: center;
@@ -63,7 +72,7 @@ li{
     color: #fbb435;
     background: #fff;
 }
-.row-b{
+.themes{
     display: inline-block;
     margin: 0.9rem auto 0 auto;
     text-align: center;
@@ -74,7 +83,7 @@ li{
     color:#fff;
     background: #69d1e9;
 }
-.row-c{
+.font{
     display: block;
     margin-top: 0.9rem;
     font-size: 0.81rem;
@@ -82,11 +91,11 @@ li{
 }
 .move{
     position: absolute;
-    top:19.8rem;
-    right:3%;
-    background: url(../img/img3.png)no-repeat 0 26.5%/150%;
-    height:56px;
-    width:28px;
+    top:20.8rem;
+    right: 7%; 
+    border-top: 15px solid transparent; 
+    border-left: 15px solid #fbb435; 
+    border-bottom: 15px solid transparent;
 }
 /* ================================================ */
 .round{
