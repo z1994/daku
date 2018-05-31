@@ -61,6 +61,7 @@ ul{
     color:#fff;
 }
 .font-c{
+    display: inline-block;
     margin-right: 1rem;
 }
 /* ======================================================== */
