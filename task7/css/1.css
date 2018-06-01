@@ -18,10 +18,10 @@ body {
 }
 
 .list {
+    margin:0.46rem 0 0 0.6rem;
     background: url(../img/img66.png)no-repeat 0 70%/100%;
     height: 30px;
-    width: 26px;
-    margin:0.46rem 0 0 0.6rem;
+    width: 26px;  
 }
 .shut{ 
     display: inline-block; 
@@ -132,7 +132,7 @@ main {
 }
 .picture {
     position: absolute;
-    display: flex;
+    display: flex; 
     justify-content: space-between;
     margin: 3.5% 0 0 5.3%;
     width: 22.6vw;
@@ -143,31 +143,31 @@ main {
 
 .knife {
     display: inline-block;
+    margin: 0;
     background: url(../img/img66.png)no-repeat -5.5% 0/180%;
     height: 5vw;
     width: 5vw;
-    margin: 0;
 }
 .zoom {
     display: inline-block;
+    margin: 0;
     background: url(../img/img66.png)no-repeat 0 12%/180%;
     height: 5vw;
     width: 5vw;
-    margin: 0;
 }
 .sniper {
     display: inline-block;
+    margin: 0;
     background: url(../img/img66.png)no-repeat 0 24.1%/180%;
     height: 5vw;
     width: 5vw;
-    margin: 0;
 }
 .doctor {
     display: inline-block;
+    margin: 0;
     background: url(../img/img66.png)no-repeat 0 37.8%/175%;
     height: 7.3vw;
-    width: 4.9vw;
-    margin: 0;
+    width: 4.9vw;  
 }
 
 /* =========================== */
