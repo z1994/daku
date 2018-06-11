@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    background: #fafafa;
+    height: 200%;
+}
+
+.container {
+    padding: 0;
+}
+header {
+    font-size: 12px;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    color: #29b078;
+    background: #fff;
+}
+
+.wx {
+    display: inline-block;
+    background: url(../img/img1.png)no-repeat 0 -5%/83%;
+    width: 22px;
+    height: 25px;
+}
+
+.qq {
+    display: inline-block;
+    background: url(../img/img1.png)no-repeat 0 33%/80%;
+    width: 22px;
+    height: 24px;
+}
+
+.wb {
+    display: inline-block;
+    background: url(../img/img1.png)no-repeat 0 69%/83%;
+    width: 22px;
+    height: 23px;
+}
+.row-right {
+    text-align: right;
+}
+/* ====================以上头部====================== */
+nav {
+    height: 5.5rem;
+    text-align: right;
+    line-height: 5.4rem;
+    font-size: 12px;
+    color: #fff;
+    background: #29b078;
+}
+
+.nav-box {
+    width: 100%;
+}
+
+.nav-font {
+    display: inline-block;
+    margin-right: 1.8rem;
+    width: 4.5rem;
+}
+.jns{
+    float: left;
+    margin-left: 2rem;
+}
+
+
+
+.font-bottom {
+    display: none;
+    width: 6rem;
+    border-bottom: solid 3.8px #fff;
+}
+
+.nav-font:hover .font-bottom {
+    display: block;
+}
+
+@media (max-width:768px) {
+    .nav-font {
+        display: none;
+    }
+}
+
+@media (min-width:769px) {
+    .menu {
+        display: none;
+    }
+}
+
+.menu {
+    margin-right: 2rem;
+}
+/* ===================以上导航栏===================== */
+
+
+.title-green{
+    line-height: 6rem;
+    font-size: 15px;
+    color:#29b078;
+}
+.home{
+    line-height: 6rem;
+    font-weight: 600;
+}
+/* ====================以上主体标题==================== */
+.main-nav{
+    padding: 1.18rem 0;
+    height: 4.5rem;
+    border-bottom:solid 1px #edf1f2;
+    border-top: solid 1px #a1a1a1;
+}
+.direction-font{
+    font-size: 12px;
+    color:#a1a1a1;
+}
+.all-font{
+    display: inline-block;
+    margin-left: 3rem;
+    width: 3.8rem;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    background: #29b078;
+}
+.class-font{
+    margin-left: 3rem;
+    font-size: 12px;
+    font-weight: 600;
+}
+/* ======================以上主体导航栏====================== */
+
+.main-title{
+    display: block;
+    margin-bottom: 5rem;
+    line-height: 6rem;
+    font-weight: 600;
+    font-size: 1.38rem;
+    border-bottom: solid 1px #a1a1a1;
+}
+/* =======================以上主体标题====================== */
+.main-box{
+    display: inline-block;
+    height: 38rem;
+    box-shadow:1px 1px 1px 1px #e2e2e2;
+}
+.touxiang-box{
+    float: left;
+}
+.touxiang{
+    width: 39%;
+}
+.text-title{
+    font-weight: 600;
+    font-size: 1.38rem;
+}
