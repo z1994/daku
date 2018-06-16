@@ -4,15 +4,14 @@ body {
     height: 200%;
 }
 
-.container {
-    padding: 0;
-}
 header {
     font-size: 12px;
-    height: 2.2rem;
     line-height: 2.2rem;
     color: #29b078;
     background: #fff;
+}
+.row-right {
+    text-align: right;
 }
 
 .wx {
@@ -35,16 +34,15 @@ header {
     width: 22px;
     height: 23px;
 }
-.row-right {
-    text-align: right;
-}
-
 
 /* ====================以上头部====================== */
 
 
+.jns {
+    float: left;
+    margin-left: 2rem;
+}
 nav {
-    height: 5.5rem;
     text-align: right;
     line-height: 5.4rem;
     font-size: 12px;
@@ -55,44 +53,86 @@ nav {
 .nav-box {
     width: 100%;
 }
-
-.nav-font {
-    display: inline-block;
-    margin-right: 1.8rem;
-    width: 4.5rem;
+.nav-font-box{
+    float: right;
 }
-.jns{
+.jns {
     float: left;
     margin-left: 2rem;
 }
-
-
-
-.font-bottom {
-    display: none;
+.nav-font {
+    display: inline-block;
+    text-align: center;
     width: 6rem;
-    border-bottom: solid 3.8px #fff;
+    color: #fff;
 }
-
-.nav-font:hover .font-bottom {
-    display: block;
+.nav-font:hover{
+    border-bottom: solid 2px #fff;
 }
-
-@media (max-width:768px) {
+@media (max-width:986px) {
     .nav-font {
         display: none;
     }
 }
 
-@media (min-width:769px) {
-    .menu {
+
+
+@media(min-width:986px){
+    .dropdown{
         display: none;
     }
 }
 
-.menu {
-    margin-right: 2rem;
+.btn{
+    display: none;
 }
+@media(max-width:986px){
+    .btn{
+        display: inline-block;
+    }
+}
+
+
+
+
+.dropdown-menu{
+    position: initial;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-width: 0;
+    box-shadow: initial;
+}
+
+.nav-ul{
+    background: #29b078;
+}
+ul{
+    text-align: center;
+}
+ul,li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav-fon {
+    display: block;
+    color: #fff;
+}
+.nav-fon:hover{
+    background: #32c086;
+}
+a{
+    text-decoration:none;  
+    
+}
+a:hover{
+    text-decoration:none;  
+}
+
 /* ===================以上导航栏===================== */
 
 .background{
@@ -102,6 +142,7 @@ nav {
 
 
 .little-green{
+    line-height: 3.8rem;
     font-size: 15px;
     color:#29b078;
 }
@@ -109,6 +150,7 @@ nav {
 
 .main-nav{
     display: block;
+    margin-bottom: 1rem;
     padding: 0;
     height: 41rem;
     width: 100%;
@@ -150,6 +192,9 @@ li:hover{
 
 /* ==================以上主体内容，左侧导航栏================= */
 
+.col-md-9{
+    padding: 0;
+}
 
 .main-text{
     display: block; 
@@ -216,4 +261,7 @@ footer {
 
 .erweima {
     width: 6.6rem;
+}
+.link{
+    
 }
