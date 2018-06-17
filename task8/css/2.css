@@ -65,6 +65,7 @@ nav {
     text-align: center;
     width: 6rem;
     color: #fff;
+    border-bottom: solid 2px #29b078;
 }
 .nav-font:hover{
     border-bottom: solid 2px #fff;
@@ -104,12 +105,15 @@ nav {
     min-width: 0;
     box-shadow: initial;
 }
-
+.box{
+    margin-left: 41%;
+}
 .nav-ul{
     background: #29b078;
 }
 ul{
-    text-align: center;
+    
+    text-align: left;
 }
 ul,li{
     list-style: none;
@@ -170,7 +174,6 @@ ul{
 }
 li{
     line-height: 2.78rem;
-    text-align: center;
     list-style: none;
     font-size: 10px;
     color: #29b078;
@@ -224,7 +227,6 @@ li:hover{
 /* =====================以上主体内容，右侧文本==================== */
 
 footer {
-    margin-top: 5rem;
     text-align: center;
     line-height: 3.8rem;
     font-size: 12px;
@@ -239,6 +241,9 @@ footer {
         text-align: left;
     }
 }
+
+
+
 
 
 .footer-line {
@@ -262,6 +267,12 @@ footer {
 .erweima {
     width: 6.6rem;
 }
-.link{
-    
+
+.lin {
+    color: #fff;
+}
+.lin:hover{
+    background: #32c086;
+    color: #fff;
+    border-bottom: solid 1px #fff;
 }

@@ -1,0 +1,339 @@
+header {
+    width: 100%;
+    color: #fff;
+    background: #1d7ad9;
+}
+
+.line {
+    line-height: 2.8rem;
+    font-size: 9px;
+}
+
+.header-right {
+    text-align: right;
+    line-height: 2.8rem;
+}
+
+.land {
+    padding: 0 0.5rem;
+    border-left: solid 1px #fff;
+}
+
+.register {
+    padding: 0 0.5rem;
+    border-right: solid 1px #fff;
+}
+
+.land:hover {
+    display: inline-block;
+    text-align: center;
+    width: 6rem;
+    color: #333;
+    background: #fff;
+}
+
+.register:hover {
+    display: inline-block;
+    text-align: center;
+    width: 6rem;
+    color: #333;
+    background: #fff;
+}
+
+/* =============头部============= */
+
+nav {
+    margin-bottom: 3rem;
+    padding: 1rem 0;
+    width: 100%;
+    background: #f9f9f9;
+}
+
+.nav-boxes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-box {
+    display: inline-block;
+    padding: 0 1rem;
+    line-height: 3.8rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    box-shadow: 1px 1px 1px 1px #e6e6e6;
+    color: #333;
+    background: #fff;
+}
+
+.nav-box:hover {
+    color: #fff;
+    background: #1d7ad9;
+}
+
+/* ================导航栏================== */
+
+/* .course {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.course-box-a {
+    width: 5rem;
+}
+
+.course-box-b {
+    width: 5rem;
+}
+
+.course-box-c {
+    width: 5rem;
+}
+
+.course-box-d {
+    width: 5rem;
+}
+
+.string-a {
+    display: inline-block;
+    position: absolute;
+    margin: 0.8rem 0 0 -37.5%;
+    width: 25.5%;
+    height: 2px;
+    border: solid 3px #ccc;
+    border-radius: 1rem;
+    z-index: -1;
+}
+
+.string-b {
+    display: inline-block;
+    position: absolute;
+    margin: 0.8rem 0 0 -12.5%;
+    width: 25.5%;
+    height: 2px;
+    border: solid 3px #ccc;
+    border-radius: 1rem;
+    z-index: -1;
+}
+
+.string-c {
+    display: inline-block;
+    position: absolute;
+    margin: 0.8rem 0 0 12.5%;
+    width: 25.5%;
+    height: 2px;
+    border: solid 3px #ccc;
+    border-radius: 1rem;
+    z-index: -1;
+}
+
+.string-d {
+    display: inline-block;
+    position: absolute;
+    margin: 0.8rem 0 0 37.5%;
+    width: 25.5%;
+    height: 2px;
+    border: solid 3px #ccc;
+    border-radius: 1rem;
+    z-index: -1;
+}
+
+.circle-a,
+.circle-b,
+.circle-c,
+.circle-d {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    color: #fff;
+    background: #cccccc;
+    z-index: 5;
+}
+
+.circle-a:hover {
+    background: #ff7f02;
+}
+
+.circle-b:hover {
+    background: #ff7f02;
+}
+
+.circle-c:hover {
+    background: #ff7f02;
+}
+
+.circle-d:hover {
+    background: #ff7f02;
+}
+
+.circle-a:hover~.string-a {
+    border: solid 3px #ff7f02;
+}
+
+.circle-b:hover~.string-b {
+    border: solid 3px #ff7f02;
+}
+
+.circle-c:hover~.string-c {
+    border: solid 3px #ff7f02;
+}
+
+.circle-d:hover~.string-d {
+    border: solid 3px #ff7f02;
+}
+
+.number {
+    display: block;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    z-index: 2;
+}
+
+.course-foot-a,
+.course-foot-b,
+.course-foot-c,
+.course-foot-d {
+    display: inline-block;
+    width: 3rem;
+    font-weight: 600;
+    font-size: 15px;
+    color: #ccc;
+}
+
+.circle-a:hover .course-foot-a {
+    color: #ff7f02;
+} */
+
+.course {}
+
+.course-a,
+.course-b,
+.course-c,
+.course-d {
+    display: inline-block;
+    text-align: center;
+    width: 25%;
+}
+
+.string-a,
+.string-b,
+.string-c,
+.string-d {
+    display: inline-block;
+    
+    position: relative;
+    width: 103%;
+    height: 2px;
+    border: solid 3px #ccc;
+    border-radius: 1rem;
+    z-index: -1;
+}
+
+.circle-a,
+.circle-b,
+.circle-c,
+.circle-d {
+    display: inline-block;
+    position: absolute;
+    margin-left: 11%;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    color: #fff;
+    background: #cccccc;
+    z-index: 5;
+}
+
+.number {
+    display: block;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    z-index: 2;
+}
+
+.course-font-a,
+.course-font-b,
+.course-font-c,
+.course-font-d {
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-weight: 600;
+    color: #ccc;
+}
+/* @media(max-width:350px){
+    .course-font-a{
+        margin: 1.5rem 0 0 0;
+    }
+} */
+
+
+.circle-a:hover{
+    background: #ff7f02;
+}
+.circle-b:hover{
+    background: #ff7f02;
+}
+.circle-c:hover{
+    background: #ff7f02;
+}
+.circle-d:hover{
+    background: #ff7f02;
+}
+
+.circle-a:hover~.string-a{
+    border-color: #ff7f02;
+    z-index: 1;
+}
+.circle-b:hover~.string-b{
+    border-color: #ff7f02;
+    z-index: 1;
+}
+.circle-c:hover~.string-c{
+    border-color: #ff7f02;
+    z-index: 1;
+}
+.circle-d:hover~.string-d{
+    border-color: #ff7f02;
+    z-index: 1;
+}
+
+.circle-a:hover .number{
+    color: #fff;
+}
+.circle-b:hover .number{
+    color: #fff;
+}
+.circle-c:hover .number{
+    color: #fff;
+}
+.circle-d:hover .number{
+    color: #fff;
+}
+
+.circle-a:hover ~.course-font-a{
+    color: #ff7f02;
+}
+.circle-b:hover ~.course-font-b{
+    color: #ff7f02;
+}
+.circle-c:hover ~.course-font-c{
+    color: #ff7f02;
+}
+.circle-d:hover ~.course-font-d{
+    color: #ff7f02;
+}
+/* ===============进度条==================== */
+
+
+
+title{
+    display: block;
+    margin-top: 5rem;
+    border-left:solid 2px  #1d7ad9;
+    font-size: 20px;
+    font-weight: 600;
+}
