@@ -11,12 +11,17 @@ header {
     color: #29b078;
     background: #fff;
 }
+.header-box{
+    display: flex;
+    justify-content: space-between;
+}
 .row-right {
     text-align: right;
 }
 
 .wx {
     display: inline-block;
+    margin-right: 1vw;
     background: url(../img/img1.png)no-repeat 0 -5%/83%;
     width: 22px;
     height: 25px;
@@ -24,6 +29,7 @@ header {
 
 .qq {
     display: inline-block;
+    margin-right: 1vw;
     background: url(../img/img1.png)no-repeat 0 33%/80%;
     width: 22px;
     height: 24.8px;
@@ -31,6 +37,7 @@ header {
 
 .wb {
     display: inline-block;
+    margin-right: 1.6vw;
     background: url(../img/img1.png)no-repeat 0 69%/83%;
     width: 22px;
     height: 23px;
@@ -38,11 +45,6 @@ header {
 
 /* ====================以上头部====================== */
 
-
-.jns {
-    float: left;
-    margin-left: 2rem;
-}
 nav {
     text-align: right;
     line-height: 5.4rem;
@@ -57,10 +59,7 @@ nav {
 .nav-font-box{
     float: right;
 }
-.jns {
-    float: left;
-    margin-left: 2rem;
-}
+
 .nav-font {
     display: inline-block;
     text-align: center;
@@ -87,13 +86,17 @@ nav {
 
 .btn{
     display: none;
+    padding: 0;
+    margin-right: 1rem;
 }
 @media(max-width:986px){
     .btn{
         display: inline-block;
     }
 }
-
+.dropdown-toggle::after{
+    display: none;
+}
 
 
 
@@ -106,22 +109,27 @@ nav {
     min-width: 0;
     box-shadow: initial;
 }
+.btn-secondary{
+    background: #29b078;
+    border: none;
+}
+.show{
+    position: initial !important;
+    transform: initial !important;
+}
+
+
 
 .nav-ul{
-    background: #29b078;
-}
-ul{
-    text-align: center;
-}
-ul,li{
     list-style: none;
-    margin: 0;
-    padding: 0;
+    background: #29b078;
+    margin: 0 !important;
 }
 
 
 .nav-fon {
     display: block;
+    text-align: center;
     color: #fff;
 }
 .nav-fon:hover{
@@ -134,6 +142,7 @@ a{
 a:hover{
     text-decoration:none;  
 }
+
 
 
 
@@ -248,7 +257,7 @@ a{
 .hide-title {
     display: none;
     text-align: center;
-    line-height: 8rem;
+    line-height: 5.5rem;
 }
 
 .hind-font {
@@ -287,9 +296,9 @@ a{
 }
 
 .text-title {
-    line-height: 3.5rem;
+    line-height: 2rem;
     font-weight: 600;
-    font-size: 1.38rem;
+    font-size: 1rem;
 }
 
 table {
@@ -340,7 +349,7 @@ th {
 .main-font {
     display: inline-block;
     margin-right: 1.2rem;
-    line-height: 3.5rem;
+    line-height: 2.8rem;
     font-size: 10px;
     color: #a1a1a1;
 }
