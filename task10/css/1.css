@@ -59,16 +59,25 @@ a:hover {
 
 /* =============头部============= */
 
-nav {
+.nav {
     margin-bottom: 3rem;
     padding: 1rem 0;
     width: 100%;
     background: #f9f9f9;
 }
-
+@media(max-width:992px){
+    .right-box{
+    width: 100%;
+    text-align: right;
+    }
+}
+.nav-item{
+    text-align: center;
+}
 .nav-boxes {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .nav-box {
@@ -79,13 +88,21 @@ nav {
     font-weight: 600;
     box-shadow: 1px 1px 1px 1px #e6e6e6;
     color: #333;
-    background: #fff;
+    background: #f3f3f3;
 }
 
 .nav-box:hover {
     color: #fff;
     background: #1d7ad9;
 }
+@media(max-width:992px){
+    .nav-box{
+        box-shadow: initial;
+        background: #f9f9f9;
+    }
+}
+
+
 
 /* ================导航栏================== */
 
@@ -96,6 +113,16 @@ nav {
     display: inline-block;
     text-align: center;
     width: 25%;
+}
+@media(max-width:768px){
+    .course-a,
+    .course-b,
+    .course-c,
+    .course-d {
+        display: block;
+        width: 100%;
+    }
+
 }
 
 .string-a,
@@ -124,6 +151,14 @@ nav {
     color: #fff;
     background: #cccccc;
     z-index: 5;
+}
+@media(max-width:768px){
+    .circle-a,
+    .circle-b,
+    .circle-c,
+    .circle-d{
+        margin-left: 43%;
+    }
 }
 
 .number {
@@ -333,6 +368,11 @@ input:checked::before {
 .left{
     margin-left: 3%;
 }
+@media(max-width:768px){
+    .left{
+        margin: 0;
+    }
+}
 
 .content-font {
     font-size: 13px;
@@ -459,6 +499,11 @@ footer {
     line-height: 2rem;
     color: #999999;
 }
+@media(max-width:768px){
+    .footer-little{
+        text-align: center;
+    }
+}
 
 .footer-font {
     line-height: 2rem;
@@ -474,9 +519,14 @@ footer {
 
 .footer-font-right {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column  wrap;
     text-align: right;
     line-height: 2rem;
+}
+@media(max-width:768px){
+    .footer-font-right{
+        text-align: center;
+    }
 }
 
 .contact {
@@ -486,6 +536,11 @@ footer {
 .erweima-box {
     padding: 0;
     text-align: right;
+}
+@media(max-width:768px){
+    .erweima-box{
+        text-align: center;
+    }
 }
 
 .erweima {
