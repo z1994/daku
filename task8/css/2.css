@@ -1,11 +1,10 @@
 body {
     margin: 0;
-    background: #fafafa;
     height: 200%;
+    background: #fafafa;
 }
 
 header {
-    padding-top: 9px;
     font-size: 12px;
     color: #29b078;
     background: #fff;
@@ -13,9 +12,11 @@ header {
 .header-box{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .row-right {
-    text-align: right;
+    display: flex;
+    align-items: center;
 }
 
 .wx {
@@ -56,7 +57,8 @@ nav {
     justify-content: space-between;
 }
 .jns{
-    width: 80%;
+    position: absolute;
+    margin-top: .5rem;
 }
 
 
@@ -215,8 +217,13 @@ li:hover{
 
 /* ==================以上主体内容，左侧导航栏================= */
 
-.col-md-9{
+/* .col-md-9{
     padding: 0;
+} */
+@media(max-width:768px){
+    .main{
+        padding: 0;
+    }
 }
 
 .main-text{

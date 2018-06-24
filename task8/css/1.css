@@ -1,12 +1,10 @@
 body {
     margin: 0;
-    background: #fafafa;
     height: 200%;
+    background: #fafafa;
 }
 
 header {
-    padding-top: 9px;
-    line-height: 2.2rem;
     font-size: 12px;
     color: #29b078;
     background: #fff;
@@ -14,9 +12,11 @@ header {
 .header-box{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .row-right {
-    text-align: right;
+    display: flex;
+    align-items: center;
 }
 
 .wx {
@@ -47,7 +47,7 @@ header {
 
 nav {
     text-align: right;
-    line-height: 5.4rem;
+    line-height: 3.8rem;
     font-size: 12px;
     color: #fff;
     background: #29b078;
@@ -160,55 +160,6 @@ ul,li{
 
 
 
-/* .summary-left {
-    display: inline-block;
-    margin: 5rem 0 0 10vw;
-    border-right: dashed 1px #dedede;
-    width: 58%;
-}
-
-.summary-up,
-.summary-maddle,
-.summary-down {
-    display: flex;
-    justify-content: space-around;
-}
-
-.deeicient {
-    display: inline-block;
-    background: url(../img/img2.png)no-repeat 0 -18%/70%;
-    width: 43px;
-    height: 66px;
-}
-
-.norm {
-    display: inline-block;
-    background: url(../img/img2.png)no-repeat 0 100%/70%;
-    width: 41px;
-    height: 40px;
-}
-
-.contacts {
-    display: inline-block;
-    background: url(../img/img2.png)no-repeat 0 54%/70%;
-    width: 40px;
-    height: 58px;
-}
-
-.deeicient-font,
-.norm-font,
-.contacts-font {
-    display: inline-block;
-    font-size: 12rem;
-    width: 12vw;
-    color: #999999;
-}
-
-.summary-maddle {
-    font-weight: 800;
-    margin-right: 2%;
-    font-size: 12px;
-} */
 .carousel-indicators li{
     display: inline-block;
     width: 1rem;
@@ -223,9 +174,6 @@ ul,li{
     text-align: center;
     margin-top: 5.1rem;
 }
-
-
-
 
 
 .col-xs-3 {
@@ -306,14 +254,14 @@ main {
     color: #333333;
 }
 
-@media(min-width:993px) {
+
     .main-box {
         display: flex;
         align-items: center;
         justify-content: space-between;
         height: 68px;
     }
-}
+
 
 @media(max-width:992px) {
     .main-box {
@@ -326,12 +274,7 @@ main {
     }
 }
 
-@media(max-width:993px) {
-    .main-box {
-        display: flex;
-        justify-content: space-around;
-    }
-}
+
 
 .around {
     display: inline-block;
@@ -344,8 +287,8 @@ main {
 
 .number {
     display: block;
-    line-height: 28px;
     width: 28px;
+    line-height: 28px;
     text-align: center;
     font-size: 12px;
     color: #29b078;
@@ -362,11 +305,8 @@ main {
     width: 1.5rem;
     height: 1.5rem;
 }
-/* @media(max-width:992px){
-    .point{
-        margin: 7px;
-    }
-} */
+
+
 
 .point-a {
     display: inline-block;
@@ -387,7 +327,7 @@ main {
 .row-tow {
     margin-top: 3rem;
 }
-@media(max-width:768px){
+@media(max-width:992px){
     .row-tow{
         margin-top: 0;
     }
@@ -399,6 +339,9 @@ main {
     margin-top: 1rem;
     border: solid 1px #e2e2e2;
     background: #fff;
+}
+.main-box-tow:hover{
+    box-shadow: 5px 10px 5px 2px #333333;
 }
 
 .touxiang-1 {
@@ -476,7 +419,7 @@ main {
     background: #fff;
 }
 
-@media( max-width:786px) {
+@media( max-width:768px) {
     .row-three {
         display: flex;
         justify-content: center;
@@ -489,7 +432,7 @@ main {
     background: #fff;
 }
 
-@media(max-width:786px) {
+@media(max-width:768px) {
     .main-box-three {
         display: inline-block;
         text-align: center;
@@ -500,9 +443,6 @@ main {
     }
 }
 
-/* .qiniu-log{
-    width: 32rem;
-} */
 
 .qiniu-log,.log {
     flex: 1 0 20%;
@@ -525,7 +465,7 @@ main {
     }
 }
 
-@media(max-width:786px) {
+@media(max-width:768px) {
     .ql.log,.log {
         display: block;
         text-align: center;
@@ -536,19 +476,18 @@ main {
         flex: inherit;
     }
 }
-@media(max-width:786px){
+@media(max-width:768px){
     .qiniu-log{
         width: 61rem;
     }
 }
 
 
-/* .ali,.jinshan,.huanxing,.ronglian,.qiniu{
-    width: 50%
-} */
+
 /* =================以上第三主要内容=============== */
 
 .link {
+    margin-bottom: 0.5rem;
     width: 100%;
     font-size: 1px;
     line-height: 2rem;
@@ -560,7 +499,7 @@ main {
     justify-content: space-between;
     width: 100%;
 }
-@media(max-width:767px){
+@media(max-width:768px){
     .ul-foot{
         display: flex;
         flex-wrap: wrap;
