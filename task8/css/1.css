@@ -523,7 +523,7 @@ main {
 }
 @media(max-width:576px){
     .li-foot {
-        margin:0 13%;
+        margin:0 11%;
         width:5rem;
     }
 }
