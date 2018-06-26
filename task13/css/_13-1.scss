@@ -1,0 +1,27 @@
+body{
+    padding: 0;
+    margin: 0;
+    background: #29bde0;
+}
+@mixin flex-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+$width:#fff;
+$border:solid 1px $width;
+header{
+    @include flex-center;
+    font-size: 1.1rem;
+    .list{
+        display: block;
+        padding: 0 .1rem;
+        height: 1.2rem;
+        width: 1rem;
+        border: solid 1px $width;
+        .line{
+            display: block;
+
+        }
+    }
+}

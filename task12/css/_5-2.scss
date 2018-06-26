@@ -109,7 +109,7 @@ nav {
         @include border;
         position: absolute;
         width: 99.5%;
-        background: #5fc0cd;
+        background: $green;
         color: #ffffff;
         z-index: 5;
     }
@@ -153,8 +153,8 @@ nav {
                 top: .45rem;
                 width: 10px;
                 height: 10px;
-                border-bottom: 2px solid #5fc0cd;
-                border-left: 2px solid #5fc0cd;
+                border-bottom: 2px solid $green;
+                border-left: 2px solid $green;
                 transform: rotate(225deg);
             }
         }
@@ -176,7 +176,7 @@ footer{
         }
         .home-font{
             margin: 0;
-            color:#5fc0cd;
+            color:$green;
         }
     }
     .footer-center{
