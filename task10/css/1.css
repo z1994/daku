@@ -450,6 +450,7 @@ input:checked::before {
 
 .content-box-e {
     display: inline-block;
+    float: right;
     position: relative;
     margin-top: 1.5rem;
     padding: 0.2rem;
