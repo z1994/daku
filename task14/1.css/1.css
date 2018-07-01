@@ -1,0 +1,53 @@
+body {
+  padding: 0;
+  margin: 5px;
+}
+
+header .header-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1.3rem;
+  font-size: .5rem;
+  color: #29b078;
+}
+header .header-box .wx {
+  display: inline-block;
+  background: url(../img/img1.png) no-repeat 0 -5%/100%;
+  width: 20px;
+  height: 20px;
+}
+header .header-box .qq {
+  display: inline-block;
+  background: url(../img/img1.png) no-repeat 0 29%/100%;
+  width: 20px;
+  height: 20px;
+}
+header .header-box .wb {
+  display: inline-block;
+  background: url(../img/img1.png) no-repeat 0 62.5%/100%;
+  width: 20px;
+  height: 20px;
+}
+
+nav {
+  background: #29b078;
+}
+nav .nav-box {
+  display: flex;
+  justify-content: flex-end;
+}
+nav .nav-box .font-box {
+  display: inline-block;
+  text-align: center;
+  width: 4.5rem;
+  line-height: 3rem;
+  border-bottom: solid 2px #29b078;
+  font-size: 10px;
+  color: #fff;
+}
+nav .nav-box .font-box:hover {
+  border-color: #fff;
+}
+
+/*# sourceMappingURL=1.css.map */

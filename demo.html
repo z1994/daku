@@ -7,45 +7,51 @@
     <title>Document</title>
 </head>
 <style>
+    ul,li{
+        margin: 0;
+        list-style: none;
+    }
     .box{
-        display: flex;
-        justify-content: space-between;
+        /* display: flex;
+        justify-content: center; */
+        width: 100%;
+        height: 50%;
     }
     .a{
-        
-        width: 3rem;
-        height: 3rem;
+        width: 20%;
+        height: 7rem;
         background: #333333;
     }
     .b{
-        width: 3rem;
-        height: 3rem;
+        height: 5rem; width: 20%;
         background: blue;
     }
     .c{
-        width: 3rem;
-        height: 3rem;
+        height: 3rem; width: 20%;
         background: rebeccapurple;
     }
     .d{
-        width: 3rem;
-        height: 3rem;
+        height: 13rem; width: 80%;
         background: red;
     }
     .e{
-        width: 3rem;
         height: 3rem;
         background: #068f5b;
     }
+
+    .a,.b,.c,.d,.e{
+      
+        flex: 1 0 20%;
+    }
 </style>
 <body>
-    <div class="box">
-        <div class="a"></div>
-        <div class="b"></div>
-        <div class="c"></div>
-        <div class="d"></div>
-        <div class="e"></div>
-    </div>
+    <ul class="box">
+        <li class="a"></li>
+        <li class="b"></li>
+        <li class="c"><li>
+        <li class="d"></li>
+        <li class="e"></li>
+    <ul>
     
 </body>
 </html>

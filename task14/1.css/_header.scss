@@ -1,0 +1,59 @@
+body {
+    padding: 0;
+    margin: 5px;
+}
+
+@mixin flex-center ($between:space-between) {
+    display: flex;
+    justify-content: $between;
+    align-items: center;
+}
+
+$green:#29b078;
+$white:#fff;
+header {
+    .header-box {
+        @include flex-center;
+        height: 1.3rem;
+        font-size: .5rem;
+        color: $green;
+        .wx {
+            display: inline-block;
+            background: url(../img/img1.png)no-repeat 0 -5%/100%;
+            width: 20px;
+            height: 20px;
+        }
+        .qq {
+            display: inline-block;
+            background: url(../img/img1.png)no-repeat 0 29%/100%;
+            width: 20px;
+            height: 20px;
+        }
+        .wb {
+            display: inline-block;
+            background: url(../img/img1.png)no-repeat 0 62.5%/100%;
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+nav {
+    background: $green;
+    .nav-box {
+        display: flex;
+        justify-content: flex-end;
+        .font-box {
+            display: inline-block;
+            text-align: center;
+            width: 4.5rem;
+            line-height: 3rem;
+            border-bottom: solid 2px $green;
+            font-size: 10px;
+            color: $white;
+            &:hover{
+                border-color: #fff
+            }
+        }
+    }
+}
