@@ -13,12 +13,12 @@
                 height: 100%;
                 opacity: .9;
                 transform: rotate(3600deg);
-        }
+        }     
         .hide-box{
             position: absolute;
             padding: 2rem ;
-            width: 10%;
             height: 10%;
+            width: 90%;
             font-size: 13px;
             background: #333;
             color: $white;

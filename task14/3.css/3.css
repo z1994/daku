@@ -844,8 +844,8 @@ nav {
 .main-a .main-box .hide-box {
   position: absolute;
   padding: 2rem;
-  width: 10%;
   height: 10%;
+  width: 90%;
   font-size: 13px;
   background: #333;
   color: #fff;
@@ -916,6 +916,39 @@ nav {
   .main-a .main-box table .font-end {
     line-height: initial;
   }
+}
+
+footer {
+  width: 100%;
+  background: #29b078;
+}
+footer .footer-main {
+  padding: .6rem 0;
+}
+footer .footer-main .font {
+  line-height: 2.6rem;
+  font-size: 12px;
+  color: #fff;
+}
+footer .footer-main .font .lin:hover {
+  border-bottom: solid 1px #fff;
+}
+footer .footer-main .font .qr {
+  width: 53%;
+}
+@media (max-width: 768px) {
+  footer .footer-main .font .qr {
+    width: 21% !important;
+  }
+}
+footer .footer-end {
+  border-top: solid 1px #32c086;
+  line-height: 1.5rem;
+  text-align: center;
+}
+footer .footer-end .end-font {
+  font-size: 12px;
+  color: #fff;
 }
 
 /*# sourceMappingURL=3.css.map */
