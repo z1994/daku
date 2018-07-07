@@ -125,6 +125,11 @@ nav .row-b {
   margin: 0 9.8% 0 8.8%;
   font-weight: 600;
 }
+.main .main-box-b .font {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .main .main-box-b .red-font {
   position: relative;
   color: #e63b0e;

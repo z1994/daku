@@ -143,6 +143,11 @@ nav {
             justify-content: space-between;
             margin: 0 9.8% 0 8.8%;
             font-weight: 600;
+            .font{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
             .red-font {
                 position: relative;
                 color: #e63b0e;

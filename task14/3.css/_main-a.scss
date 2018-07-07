@@ -18,11 +18,11 @@
             position: absolute;
             padding: 2rem ;
             height: 10%;
-            width: 90%;
+            width: 10%;
             font-size: 13px;
             background: #333;
             color: $white;
-            opacity: 0;
+            opacity: 1;
             transform: rotate(0deg);
             transition: all 1s;
             .hide-title{
