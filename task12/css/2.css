@@ -132,12 +132,13 @@ nav .row-b {
 }
 .main .main-box-b .red-font {
   position: relative;
+  white-space: nowrap;
   color: #e63b0e;
 }
 .main .main-box-b .arrow {
   position: absolute;
   right: -45%;
-  top: .45rem;
+  top: .38rem;
   width: 10px;
   height: 10px;
   border-bottom: 2px solid #5fc0cd;

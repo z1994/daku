@@ -141,6 +141,9 @@ main .li-footer-font {
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   margin-top: 3rem;
   text-align: center;
 }
@@ -154,6 +157,7 @@ footer .footer-left, footer .footer-right {
 footer .footer-left {
   border: solid 1px #5fc0cd;
   color: #5fc0cd;
+  background: #fff;
 }
 footer .footer-right {
   color: #ffffff;

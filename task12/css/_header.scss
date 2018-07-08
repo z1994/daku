@@ -152,6 +152,9 @@ main {
 }
 
 footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     margin-top: 3rem;
     text-align: center;
     .footer-left,.footer-right{
@@ -165,6 +168,7 @@ footer{
     .footer-left{
         border: solid 1px $bg-green;
         color: $bg-green;
+        background: #fff;
     }
     .footer-right{
         color: $font-white;
