@@ -4,11 +4,11 @@ body {
   background: #f0f0f0;
 }
 
-nav {
+.nav {
   position: relative;
   overflow: hidden;
 }
-nav .input {
+.nav .input {
   display: none;
   width: 3rem;
   height: 2rem;
@@ -16,7 +16,7 @@ nav .input {
   -webkit-appearance: none;
   border-radius: 0;
 }
-nav .menu-box {
+.nav .menu-box {
   position: absolute;
   margin: 0;
   width: 44.5%;
@@ -26,7 +26,7 @@ nav .menu-box {
   color: #29bde0;
   background: #fff;
 }
-nav .menu-box .hide-arrow {
+.nav .menu-box .hide-arrow {
   position: absolute;
   top: 1.46rem;
   right: 1rem;
@@ -36,12 +36,12 @@ nav .menu-box .hide-arrow {
   border-left: 3px solid #e7e7e7;
   transform: rotate(225deg);
 }
-nav .content {
+.nav .content {
   position: relative;
   width: 100%;
   background: #fff;
 }
-nav .content header {
+.nav .content header {
   display: flex;
   align-items: center;
   position: fixed;
@@ -51,16 +51,15 @@ nav .content header {
   background: #29bde0;
   z-index: 1;
 }
-nav .content header label {
+.nav .content header label {
   display: block;
 }
-nav .content main {
+.nav .content main {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 3rem;
 }
-nav .content main .main-nav {
+.nav .content main .main-nav {
   display: block;
   position: relative;
   margin: 1.2rem 0;
@@ -72,7 +71,7 @@ nav .content main .main-nav {
   color: #9a9a9a;
   background: #fff;
 }
-nav .content main .main-nav .arrow {
+.nav .content main .main-nav .arrow {
   position: absolute;
   top: 1.46rem;
   right: 1rem;
@@ -82,7 +81,7 @@ nav .content main .main-nav .arrow {
   border-left: 3px solid #e7e7e7;
   transform: rotate(225deg);
 }
-nav .content main .main-boxes {
+.nav .content main .main-boxes {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -91,7 +90,7 @@ nav .content main .main-boxes {
   border: solid 1px #c9c9c9;
   background: #fff;
 }
-nav .content main .main-boxes .main-title {
+.nav .content main .main-boxes .main-title {
   width: 100%;
   line-height: 4rem;
   text-align: center;
@@ -100,7 +99,7 @@ nav .content main .main-boxes .main-title {
   font-weight: 100;
   color: #fbb435;
 }
-nav .content main .main-boxes .main-box {
+.nav .content main .main-boxes .main-box {
   display: block;
   margin: 1.3rem 0;
   width: 80%;
@@ -111,13 +110,13 @@ nav .content main .main-boxes .main-box {
   color: #fff;
   background: #69d1e9;
 }
-nav .content main .main-boxes .main-font {
+.nav .content main .main-boxes .main-font {
   width: 100%;
   text-align: center;
   font-size: 1.08rem;
   color: #787878;
 }
-nav .content main .main-boxes .triangle {
+.nav .content main .main-boxes .triangle {
   position: absolute;
   top: 16.3rem;
   right: .3rem;
@@ -125,7 +124,7 @@ nav .content main .main-boxes .triangle {
   border-top: solid 20px transparent;
   border-bottom: solid 20px transparent;
 }
-nav .content main .main-boxes .circle {
+.nav .content main .main-boxes .circle {
   display: inline-block;
   margin: 1rem .2rem;
   width: .7rem;
@@ -133,7 +132,7 @@ nav .content main .main-boxes .circle {
   border-radius: 50%;
   background: #f0f0f0;
 }
-nav .content main .main-boxes .circle:hover {
+.nav .content main .main-boxes .circle:hover {
   background: #29bde0;
 }
 

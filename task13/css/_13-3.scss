@@ -10,7 +10,7 @@ body {
     flex-direction: column;
 }
 
-nav {
+.nav {
     position: relative;
     overflow: hidden;
     .input{
@@ -73,7 +73,6 @@ nav {
 
         main {
             @include center;
-            margin-top: 3rem;
             .main-nav {
                 display: block;
                 position: relative;
