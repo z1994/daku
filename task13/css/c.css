@@ -19,7 +19,7 @@ nav .input {
 nav .menu-box {
   position: absolute;
   margin: 0;
-  width: 45%;
+  width: 44.5%;
   height: 100%;
   line-height: 3.5rem;
   font-size: 16px;
@@ -38,6 +38,7 @@ nav .menu-box .hide-arrow {
 }
 nav .content {
   position: relative;
+  width: 100%;
   background: #fff;
 }
 nav .content header {

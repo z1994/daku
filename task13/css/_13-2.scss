@@ -81,6 +81,9 @@ header {
 
 main {
     margin: 34rem 0 6.6rem 0;
+    @media(max-width:363px){
+        margin-top: 38rem;
+    }
     .main-box {
         border-bottom: $border;
         .time-left {

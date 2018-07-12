@@ -97,7 +97,7 @@ nav .arrow-font {
 
 main {
   display: block;
-  margin-bottom: 50rem;
+  margin-bottom: 56rem;
 }
 main .main-box {
   float: left;
@@ -137,25 +137,25 @@ main .main-box .picture {
 }
 main .main-box .picture .knife {
   display: inline-block;
-  background: url(../img/knife.png) no-repeat 30% 73%/108%;
+  background: url(../img/img66.png) no-repeat 30% -0.5%/108%;
   width: 5vw;
   height: 5vw;
 }
 main .main-box .picture .zoom {
   display: inline-block;
-  background: url(../img/zoom.png) no-repeat 46% 30%/120%;
+  background: url(../img/img66.png) no-repeat 46% 11.6%/108%;
   width: 5vw;
   height: 5vw;
 }
 main .main-box .picture .sniper {
   display: inline-block;
-  background: url(../img/sniper.png) no-repeat 0% 0%/105%;
+  background: url(../img/img66.png) no-repeat 0% 24%/105%;
   width: 5vw;
   height: 5vw;
 }
 main .main-box .picture .doctor {
   display: inline-block;
-  background: url(../img/doctor.png) no-repeat 0% 0%/105%;
+  background: url(../img/img66.png) no-repeat 0% 37.3%/105%;
   width: 5vw;
   height: 5vw;
 }

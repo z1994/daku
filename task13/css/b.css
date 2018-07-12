@@ -76,6 +76,11 @@ header .header-table .inline {
 main {
   margin: 34rem 0 6.6rem 0;
 }
+@media (max-width: 363px) {
+  main {
+    margin-top: 38rem;
+  }
+}
 main .main-box {
   border-bottom: solid 1px #a6a6a6;
 }
