@@ -7,22 +7,41 @@
     <title>Document</title>
 </head>
 <style>
-   .left{
-    width: .34rem;
-    height: .32rem;
-    padding: .1rem 0;
-    margin: .38rem 0 0.22rem;
-    border: none;
-    outline: none;
-    border-top: .04rem solid #333333;
-    border-bottom: .04rem solid #333333;
-    background: #333333 content-box;
+   .box{
+    display: inline-block;
+    height: 5rem;
+    width: 5rem;
+    background: #333;
+   }
+   .a{
+    display: inline-block;
+    height: 5rem;
+    width: 5rem;
+    background: #333;
+   }
+   @media(max-width:768px){
+       .box{
+           display: block;
+           background: red;
+           width: 50%;
+       }
+   }
+   /* @media(max-width:768px){
+       .a{
+       display: block;
+   }} */
+   @media(min-width:998px){
+          .a{
+              height: 20rem;
+              background: #999;
+          }
    }
 </style>
 <body>
-    <div class="left"></div>
+    <div class="box"></div>
+    <div class="a"></div>
         
-    <ul>
+    
     
 </body>
 </html>
