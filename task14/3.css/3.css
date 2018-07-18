@@ -844,12 +844,12 @@ nav {
 .main-a .main-box .hide-box {
   position: absolute;
   padding: 2rem;
-  height: 10%;
-  width: 10%;
+  height: 60%;
+  width: 60%;
   font-size: 13px;
   background: #333;
   color: #fff;
-  opacity: 1;
+  opacity: 0;
   transform: rotate(0deg);
   transition: all 1s;
 }
