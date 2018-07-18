@@ -17,7 +17,7 @@ header {
     position: fixed;
     height: 3rem;
     width: 100%;
-    top:0;
+    top: 0;
     background: #29bde0;
     z-index: 1;
     .list {
@@ -102,64 +102,123 @@ nav {
     }
 }
 
+// main {
+//     display: block;
+//     margin-bottom: 6rem;
+//     .main-box {
+//         display: inline-block;
+//         margin: 7.8% 3.1% 5% 6%;
+//         width: 22vw;
+//         height: 22vw;
+//         border: $border;
+//         background: #fbb435;
+//         .box{
+//             &:hover~.picture {
+//                 opacity: 1;
+//             }
+//         .profession {
+//             @include flex-center;
+//             height: 80%;
+//             width: 100%;
+//             font-size: 1.2rem; 
+//         }
+//         .number {
+//             @include flex-center;
+//             bottom: 0;
+//             height: 20%;
+//             width: 100%;
+//             color: $width;
+//             background: #83b09a;
+//         }
+//     }
+//         .picture {
+//             @include flex-center(space-between);
+//             margin-top: 18%;
+//             opacity: 0;
+//             .knife {
+//                 display: inline-block;
+//                 background: url(../img/img66.png)no-repeat 0% -.1%/150%;
+//                 width: 6vw;
+//                 height: 6vw;
+//             }
+//             .zoom {
+//                 display: inline-block;
+//                 background: url(../img/img66.png)no-repeat 0% 11.9%/150%;
+//                 width: 6vw;
+//                 height: 6vw;
+//             }
+//             .sniper {
+//                 display: inline-block;
+//                 background: url(../img/img66.png)no-repeat 0% 24%/150%;
+//                 width: 6vw;
+//                 height: 6vw;
+//             }
+//             .doctor {
+//                 display: inline-block;
+//                 background: url(../img/img66.png)no-repeat 0% 37%/150%;
+//                 width: 6vw;
+//                 height: 6vw;
+//             }
+//         }
+//     }
+// }
 main {
-    display: block;
-    margin-bottom: 56rem;
-    .main-box {
-        float: left;
-        margin: 7.8% 3% 5% 6%;
-        width: 22vw;
-        height: 22vw;
-        border: $border;
-        background: #fbb435;
-        .profession {
-            @include flex-center;
-            height: 80%;
-            width: 100%;
-            font-size: 1.2rem;
-            &:hover~.picture {
+    margin: 3rem 0 10rem 0;
+    .boxes {
+        @include flex-center(space-around);
+        .box {
+            display: inline-block;
+            width: 22vw;
+            border: $border;
+            background: #fbb435;
+            &:hover ~.picture{
                 opacity: 1;
             }
+            .box-main {
+                height: 80%;
+                width: 100%;
+                line-height: 17.5vw;
+                text-align: center;
+            }
+            .box-sub {
+                line-height: 4.5vw;
+                text-align: center;
+                color: $width;
+                background: #83b09a;
+            }
         }
-        .number {
-            @include flex-center;
-            bottom: 0;
-            height: 20%;
-            width: 100%;
-            color: $width;
-            background: #83b09a;
-        }
-        .picture {
-            @include flex-center(space-between);
-            margin-top: 18%;
-            opacity: 0;
-            .knife {
-                display: inline-block;
-                background: url(../img/img66.png)no-repeat 30% -.5%/108%;
-                width: 5vw;
-                height: 5vw;
-            }
-            .zoom {
-                display: inline-block;
-                background: url(../img/img66.png)no-repeat 46% 11.6%/108%;
-                width: 5vw;
-                height: 5vw;
-            }
-            .sniper {
-                display: inline-block;
-                background: url(../img/img66.png)no-repeat 0% 24%/105%;
-                width: 5vw;
-                height: 5vw;
-            }
-            .doctor {
-                display: inline-block;
-                background: url(../img/img66.png)no-repeat 0% 37.3%/105%;
-                width: 5vw;
-                height: 5vw;
+            .picture {
+                @include flex-center(space-between);
+                margin:3vw 0;
+                opacity: 0;
+                .knife {
+                    display: inline-block;
+                    background: url(../img/img66.png)no-repeat 0% -.1%/175%;
+                    width: 4.3vw;
+                    height: 5.2vw;
+                }
+                .zoom {
+                    display: inline-block;
+                    background: url(../img/img66.png)no-repeat 0% 11.9%/175%;
+                    width: 4.3vw;
+                    height: 5.2vw;
+                }
+                .sniper {
+                    display: inline-block;
+                    background: url(../img/img66.png)no-repeat 0% 24%/175%;
+                    width: 4.3vw;
+                    height: 5.2vw;
+                }
+                .doctor {
+                    display: inline-block;
+                    background: url(../img/img66.png)no-repeat 0% 37%/175%;
+                    width: 4.3vw;
+                    height: 5.2vw;
+                }
             }
         }
     }
-}
+
 
 footer {
     @include flex-center;

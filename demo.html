@@ -6,42 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<style>
-   .box{
-    display: inline-block;
-    height: 5rem;
-    width: 5rem;
-    background: #333;
-   }
-   .a{
-    display: inline-block;
-    height: 5rem;
-    width: 5rem;
-    background: #333;
-   }
-   @media(max-width:768px){
-       .box{
-           display: block;
-           background: red;
-           width: 50%;
-       }
-   }
-   /* @media(max-width:768px){
-       .a{
-       display: block;
-   }} */
-   @media(min-width:998px){
-          .a{
-              height: 20rem;
-              background: #999;
-          }
-   }
-</style>
+<script>
+    function square(num){
+       var total=num*num;
+        return total;
+    }
+    var total=50;
+    var number=square(20);
+    alert(total);
+</script>
 <body>
-    <div class="box"></div>
-    <div class="a"></div>
-        
-    
     
 </body>
 </html>
