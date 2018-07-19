@@ -94,4 +94,9 @@ main .main-footer {
   color: #ffffff;
 }
 
+#killer, #civ {
+  border: none;
+  width: .9rem;
+}
+
 /*# sourceMappingURL=deal.css.map */

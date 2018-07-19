@@ -55,4 +55,17 @@
         }
 
     }
+    .show-boxes{
+        display: none;
+        margin-bottom: 3rem;
+        padding: .5rem;
+        width: 100%;
+        box-shadow: 1px 1px 1px 1px #999;
+        background: $white;
+        @media(min-width: 993px){
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
 }

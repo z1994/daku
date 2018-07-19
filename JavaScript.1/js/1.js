@@ -114,21 +114,20 @@ function begin(){
     var one=Math.floor(Math.random()*list.length);
     var two=Math.floor(Math.random()*list.length);
     var three=Math.floor(Math.random()*list.length);
-
-
-if(one==two){
+if(one==two || two==three || three==one) {
     one=Math.floor(Math.random()*list.length);
-}
-else if(two==three){
     two=Math.floor(Math.random()*list.length);
-}
-else if(three==one){
     three=Math.floor(Math.random()*list.length);
 }
 list[one].style.background='rgb'+colors();
 list[two].style.background='rgb'+colors();
 list[three].style.background='rgb'+colors();
+
+// console.log(one)
+//     console.log(two)
+//     console.log(three)
 }
+  
 
 function colors(){
     var rgb;
@@ -136,8 +135,9 @@ function colors(){
     var g=Math.floor(Math.random()*265);
     var b=Math.floor(Math.random()*265);
     rgb='('+r+','+g+','+b+')';
-    return rgb
+    return rgb;
 }
+
 run.onclick=function(){
     clearInterval(time);
     time=setInterval(function(){
@@ -145,7 +145,7 @@ run.onclick=function(){
             list[i].style.backgroundColor='';
         }
         begin();
-    },100);
+    },1000);
 }
 stop.onclick=function(){
     clearInterval(time);

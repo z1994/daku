@@ -20,11 +20,15 @@
         <div class="main-content">
             <div class="content-box">
                 <span class="portrait"></span>
-                <span>杀手2人</span>
+                <span>杀手</span>
+                <input type="text" id="killer">
+                <span>人</span>
             </div>
             <div class="content-box">
                     <span class="portrait"></span>
-                    <span>平民6人</span>
+                    <span>平民</span>
+                    <input type="text" id="civ">
+                    <span>人</span>
                 </div>
         </div>
 
@@ -33,8 +37,9 @@
         <div class="input-box">
             <span class="before-font">请输入玩家数量</span>
             
-                    <input type="text" class="form-control" id="recoSoft" maxlength="2"
-                     onkeyup="value=value.replace(/[^\d]/g,'')" placeholder="请输入排序" style="width: 200px;"/>
+            <form class="form_box"> 
+            <input type="text" id="a" oninput="aa(event)" onporpertychange="aa(event)" />      
+            <!-- <input type="text" maxlength="2" id="form" onkeyup="value=value.replace(/[^\d]/g,'')"/></form>  -->
             <span class="after-font">玩家数量为4~18</span>
         </div>
 

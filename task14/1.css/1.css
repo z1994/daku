@@ -465,6 +465,21 @@ main .main-box .point {
 .enterprise .hide-boxes .enterprise-box:hover {
   box-shadow: 1px 1px 1px 1px #999;
 }
+.enterprise .show-boxes {
+  display: none;
+  margin-bottom: 3rem;
+  padding: .5rem;
+  width: 100%;
+  box-shadow: 1px 1px 1px 1px #999;
+  background: #fff;
+}
+@media (min-width: 993px) {
+  .enterprise .show-boxes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 
 .link {
   padding-bottom: .6rem;
@@ -481,7 +496,6 @@ main .main-box .point {
   line-height: 1.8rem;
 }
 .link ul li, .link li li {
-  padding: 0 .5rem;
   border-bottom: solid 1px #fff;
 }
 .link ul li:hover, .link li li:hover {
@@ -517,6 +531,7 @@ footer .footer-main .font .lin:hover {
   border-bottom: solid 1px #fff;
 }
 footer .footer-main .font .qr {
+  display: block;
   width: 53%;
 }
 @media (max-width: 768px) {
