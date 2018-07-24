@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <div class="back"></div>
+        <div id="back"></div>
     </header>
 
     <main>
@@ -21,13 +21,13 @@
             <div class="content-box">
                 <span class="portrait"></span>
                 <span>杀手</span>
-                <input type="text" id="killer">
+                <span id="killer"></span>
                 <span>人</span>
             </div>
             <div class="content-box">
                     <span class="portrait"></span>
                     <span>平民</span>
-                    <input type="text" id="civ">
+                    <span id="civ"></span>
                     <span>人</span>
                 </div>
         </div>
@@ -37,18 +37,18 @@
         <div class="input-box">
             <span class="before-font">请输入玩家数量</span>
             
-            <form class="form_box"> 
-            <input type="text" id="a" oninput="aa(event)" onporpertychange="aa(event)" />      
-            <!-- <input type="text" maxlength="2" id="form" onkeyup="value=value.replace(/[^\d]/g,'')"/></form>  -->
+             
+            <input type="text" id="myinput" 
+            value="8" maxlength="2" onkeyup="value=value.replace(/[^\d]/g,'')">      
             <span class="after-font">玩家数量为4~18</span>
-        </div>
+       </div>
 
         <div class="main-footer">
-            <span>去发牌</span>
+             <span id="go">去发牌</span>
         </div>
 
 
     </main>
-
+    <script src="../JavaScript2/js/1.js"></script>
 </body>
 </html>

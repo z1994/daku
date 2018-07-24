@@ -3,19 +3,16 @@
 
 <head>
     <script type="text/javascript">
-        document.getElementById('filltext').attachEvent('onpropertychange', function () {
-            console.log(arguments.length);
-            for (var i = 0; i < arguments.length; i++) {
-                console.log(arguments[i]);
-            }
-        });
+        function myf(){
+            var x=document.getElementById("myinput").value;
+            document.getElementById("demo").innerHTML="你输入的是："+x;
+        }
     </script>
 </head>
 
 <body>
-    <div id="target"></div>
-    <br />
-    <input oninput="document.getElementById('target').innerHTML=this.value" id="filltext" type="text" />
+    <input type="text" id="myinput" oninput="myf()">
+    <p id="demo"></p>  
 </body>
 
 </html>
