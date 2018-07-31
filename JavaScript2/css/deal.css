@@ -89,9 +89,16 @@ main .main-footer {
   width: 95%;
   line-height: 3rem;
   text-align: center;
-  font-size: 1.3rem;
   background: #fbb435;
-  color: #ffffff;
+}
+main .main-footer button {
+  width: 100%;
+  border: 1px solid transparent;
+  outline: none;
+  font-size: 1.3rem;
+  border: none;
+  color: #fff;
+  background: #fbb435;
 }
 
 #killer, #civ {

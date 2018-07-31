@@ -76,7 +76,7 @@ main {
                 z-index: 3;
             }
         }
-        .picture {
+        #picture1 {
             position: absolute;
             margin: auto;
             top: 0;
@@ -84,6 +84,23 @@ main {
             left: 0;
             right: 0;
             height: 45%;
+        }
+        #picture2{
+            display: none;
+             position: absolute;
+             margin: auto;
+             top: -30%;
+             bottom: 0;
+             left: 0;
+             right: 0;
+             height: 45%;
+        }
+        #player{
+            display: none;
+            margin-top: 13rem;
+            text-align: center;
+            font-size: 1.38rem;
+            color: #29bde0;
         }
     }
     .main-footer{
@@ -94,5 +111,11 @@ main {
         font-size: 1.3rem;
         color:#fff;
         background: #fbb435;
+        #number-box-a{
+            display: inline-block;
+        }
+        #number-box-b{
+            display: none;
+        }
     }
 }

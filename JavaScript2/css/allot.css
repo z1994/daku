@@ -78,7 +78,7 @@ main .centent .circle .number {
   color: #f56b81;
   z-index: 3;
 }
-main .centent .picture {
+main .centent #picture1 {
   position: absolute;
   margin: auto;
   top: 0;
@@ -86,6 +86,23 @@ main .centent .picture {
   left: 0;
   right: 0;
   height: 45%;
+}
+main .centent #picture2 {
+  display: none;
+  position: absolute;
+  margin: auto;
+  top: -30%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 45%;
+}
+main .centent #player {
+  display: none;
+  margin-top: 13rem;
+  text-align: center;
+  font-size: 1.38rem;
+  color: #29bde0;
 }
 main .main-footer {
   margin-top: 3.5rem;
@@ -95,6 +112,12 @@ main .main-footer {
   font-size: 1.3rem;
   color: #fff;
   background: #fbb435;
+}
+main .main-footer #number-box-a {
+  display: inline-block;
+}
+main .main-footer #number-box-b {
+  display: none;
 }
 
 /*# sourceMappingURL=allot.css.map */
