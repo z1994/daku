@@ -50,9 +50,10 @@ nav {
 nav .nav-font {
   margin-left: 6%;
   line-height: 2rem;
-  font-size: .76rem;
+  font-size: .8rem;
 }
 nav .triangle {
+  display: flex;
   margin-left: 6%;
   width: 0;
   border-top: solid 15px #b9e9f5;
@@ -61,7 +62,7 @@ nav .triangle {
 }
 nav .out-font {
   margin-left: 6%;
-  font-size: .7rem;
+  font-size: .75rem;
   color: #fff;
 }
 
@@ -70,7 +71,7 @@ main {
 }
 main .box {
   float: left;
-  margin: 6vw 6vw;
+  margin: 4.5vw 6vw;
   border: solid 2px #fff;
   background: #f5c97b;
 }
@@ -81,6 +82,7 @@ main .box .main_font {
   font-size: .9rem;
 }
 main .box .main_number {
+  position: relative;
   display: block;
   width: 100%;
   text-align: center;
@@ -88,6 +90,18 @@ main .box .main_number {
   font-size: .7rem;
   color: #fff;
   background: #83b09a;
+}
+main .box .skill-box {
+  display: none;
+  position: absolute;
+  margin-top: 2%;
+  width: 20vw;
+}
+main .box .skill-box .skill {
+  text-align: center;
+}
+main .box .skill-box .skill .killer {
+  width: 5vw;
 }
 
 footer {

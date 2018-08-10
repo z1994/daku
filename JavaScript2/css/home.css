@@ -112,4 +112,8 @@ main .main-boxes .around-box .around:hover {
   background: #29bde0;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=home.css.map */

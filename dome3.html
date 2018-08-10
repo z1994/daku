@@ -1,25 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-</head>
-<script>
-    var team=[1,2,3,4];
-var res=[];
+    <style>
+        .green,
+        .yellow,
+        .red,
+        .clear {
+            display: inline-block;
+            margin: 1rem;
+            width: 5rem;
+            height: 5rem;
+            border: solid 1px #000;
+            border-radius: 50%;
+        }
 
-var len=team.length
-for(let i=0;i<team.length;i++){
-    var randomIndex=Math.floor(Math.random()*team.length);
-    res[i]=team[randomIndex];
-    team.splice(randomIndex,1);
-    
-}
-console.log(res);
-</script>
+        .green {
+            background: green;
+        }
+
+        .yellow {
+            background: yellow;
+        }
+
+        .red {
+            background: red;
+        }
+    </style>
+</head>
+
 <body>
-    
+    <div class="green"></div>
+    <div class="yellow"></div>
+    <div class="red"></div>
+    <br>
+    <div class="clear"></div>
+
+    <script src="jquery-3.3.1.min.js"></script>
+
+    <script src="state-machine.js"></script>
+    <script>
+        var fsm = new StateMachine({
+            init: 'green',
+            transitions: [{
+                    name: 'warn',
+                    from: 'green',
+                    to: 'yellow',
+                },
+                {
+                    name: 'panic',
+                    from: 'yellow',
+                    to: 'red',
+                },
+                {
+                    name: 'calm',
+                    form: 'red',
+                    to: 'yellow',
+                },
+                {
+                    name: 'clear',
+                    from: 'yellow',
+                    to: 'green',
+                }
+            ],
+        })
+
+
+        $('.green').on('click', function () {
+            console.log(fsm.can('warn'));
+            fsm.warn();
+        })
+
+        $('.yellow').on('click', function () {
+            console.log(fsm.can('panic')); 
+            fsm.panic();
+        })
+
+        $('.red').on('click', function () {
+            console.log(fsm.can('calm'));
+            fsm.calm();
+        })
+
+        $('.clear').on('click', function () {
+            console.log(fsm.can('clear'));
+            fsm.clear();
+        })
+
+
+
+
+
+    </script>
 </body>
+
+
+
 </html>

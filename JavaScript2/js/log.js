@@ -35,6 +35,9 @@ player[i].innerText=(arr[i]);
 }
 run();
 
+function box(){
+    var show=document.getElementsByClassName("skill-box")[0,1,2,3,4,5,6,7].style.display="block";
+}
 
 // function myFunction(){
 
@@ -42,3 +45,4 @@ run();
 // 	var cln=my2.cloneNode(true);//变量cln=克隆itm
 // 	document.getElementById("my1").appendChild(cln);//将变量cln放入m1的HTML的后面
 // }
+

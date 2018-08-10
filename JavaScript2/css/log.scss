@@ -41,26 +41,27 @@ header {
     }
 }
 
-nav{
+nav {
     display: block;
     width: 100%;
     height: 2rem;
     background: #b9e9f5;
-    .nav-font{
+    .nav-font {
         margin-left: 6%;
         line-height: 2rem;
-        font-size: .76rem;
+        font-size: .8rem;
     }
-    .triangle{
+    .triangle {
+        display: flex;
         margin-left: 6%;
         width: 0;
         border-top: solid 15px #b9e9f5;
         border-left: solid 7px transparent;
         border-right: solid 7px transparent;
     }
-    .out-font{
+    .out-font {
         margin-left: 6%;
-        font-size: .7rem;
+        font-size: .75rem;
         color: #fff;
     }
 }
@@ -69,16 +70,17 @@ main {
     margin-top: 1.5rem;
     .box {
         float: left;
-        margin: 6vw 6vw;
+        margin: 4.5vw 6vw;
         border: solid 2px #fff;
         background: #f5c97b;
         .main_font {
             width: 20vw;
             line-height: 15vw;
             text-align: center;
-            font-size: .9rem; 
+            font-size: .9rem;
         }
         .main_number {
+            position: relative;
             display: block;
             width: 100%;
             text-align: center;
@@ -87,26 +89,39 @@ main {
             color: #fff;
             background: #83b09a;
         }
+        .skill-box {
+            display: none;
+            position: absolute;
+            margin-top: 2%;
+            width: 20vw;
+            .skill {
+                text-align: center;
+                .killer {
+                    width: 5vw;
+                }
+            }
+        }
     }
 }
 
-footer{
+footer {
     position: fixed;
     padding-top: .5rem;
     width: 100%;
     text-align: center;
     bottom: 0rem;
     background: #29bde0;
-    .footer-box{
+    .footer-box {
         display: inline-block;
         margin-bottom: 1.5rem;
         width: 80%;
         text-align: center;
         background: #fbb435;
-        .footer-font{
+        .footer-font {
             line-height: 3.3rem;
             font-size: 1.3rem;
             color: #fff;
         }
     }
 }
+
