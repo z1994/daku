@@ -45,28 +45,28 @@
     <script src="state-machine.js"></script>
     <script>
         var fsm = new StateMachine({
-            init: 'green',
+            init: 'green',//从green开始
             transitions: [{
                     name: 'warn',
                     from: 'green',
-                    to: 'yellow',
+                    to: 'yellow'
                 },
                 {
                     name: 'panic',
                     from: 'yellow',
-                    to: 'red',
+                    to: 'red'
                 },
                 {
                     name: 'calm',
-                    form: 'red',
-                    to: 'yellow',
+                    from: 'red',
+                    to: 'yellow'
                 },
                 {
                     name: 'clear',
                     from: 'yellow',
-                    to: 'green',
+                    to: 'green'
                 }
-            ],
+            ]
         })
 
 

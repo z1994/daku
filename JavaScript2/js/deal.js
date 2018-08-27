@@ -33,19 +33,19 @@ input.oninput = function myf() {
 
 // 这是点击事件
 function button() {
-    // var x = document.getElementById("myinput").value; //变量X为输入的总人数
-    // if (4 > x || 18 < x) { //判断条件
-    //     confirm('人数不对') //对话框
-    // } else {
-    //     var res = []; //乱序，不过看不懂啊！！！！！！！！！
-    //     for (var i = 0, len = arr.length; i < len; i++) {
-    //         var randomIndex = Math.floor(Math.random() * arr.length);
-    //         res[i] = arr[randomIndex];
-    //         arr.splice(randomIndex, 1);
-    //     }
-    //     localStorage.setItem("key", JSON.stringify(res));
-    //     console.log(res);
-    // }
+    var x = document.getElementById("myinput").value; //变量X为输入的总人数
+    if (4 > x || 18 < x) { //判断条件
+        confirm('人数不对') //对话框
+    } else {
+        var res = []; //乱序，不过看不懂啊！！！！！！！！！
+        for (var i = 0, len = arr.length; i < len; i++) {
+            var randomIndex = Math.floor(Math.random() * arr.length);
+            res[i] = arr[randomIndex];
+            arr.splice(randomIndex, 1);
+        }
+        localStorage.setItem("key", JSON.stringify(res));//保存数据
+        console.log(res);
+    }
     location.href = "./allot.html";
     return false;
 }
