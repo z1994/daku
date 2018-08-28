@@ -113,26 +113,7 @@ if (!localStorage.getItem('res')) { //如果没有get“res”
 }
 
 
-// for(i=0;i<res.length;i++){
-//     if(res[i].job=="平民"&&res[i].life=="die"){
-//         location.href="over.html";
 
-//     }
-//     if(res[i].job=="杀手"&&res[i].life=="die"){
-//         location.href="over.html";
-//         console.log(222)
-//     }
-// }
-
-
-
-
-
-// for(let i=0;i<arr.length;i++){
-//     var bb=document.getElementsByClassName("box");
-//     res[i]=bb[i];
-//     console.log(i)
-// }
 
 if (!localStorage.getItem('look')) {
     function footer_box() {
@@ -223,43 +204,3 @@ for (i = 0; i < res.length; i++) {
 
 
 
-// if(localStorage.getItem('vote')){//如果get到‘vote’
-//     header_font.innerHTML="投票";//头部HTML样式改为“投票”
-//     // localStorage.removeItem('vote')//清除‘vote’
-// }
-// console.log(localStorage.getItem('vote'))
-
-
-// if(JSON.parse(localStorage.getItem('vote'))){
-//     header_font.innerHTML="投票";//头部HTML样式改为“投票”
-// }
-// if( header_font.innerHTML="投票"){
-
-
-// }
-8
-
-// for (i = 0; i < res.length; i++) {
-//     if (res[i].job == "平民") {
-//         if (res[i].life == "c") {
-//             mm++;
-//             // if (mm == 0) {
-//             //     location.href = "over.html";
-//             // }
-//         }//判断语句不能放在for循环里！！！！！！！！！
-//     }
-
-//     if (res[i].job == "杀手") {
-//         if (res[i].life == "c") {
-//             nn++;
-//             // if (nn === 0) {
-//             //     location.href = "over.html";
-//             // }
-//         }
-//     }
-// }
-// if (mm==0||nn==0){
-//     location.href = "over.html";
-// }
-// if ()
-// console.log(mm,nn)

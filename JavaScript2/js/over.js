@@ -77,7 +77,7 @@ if (die[die.length - 1].kill == undefined) { //如果die数组最后一个对象
 
 
 
-
+//jquery代码如下
 // if (die) {
 //     for (let i = 0; i < die.length - 1; i++) {
 //         document.getElementsByClassName("a")[i].innerHTML = "晚上:" + (die[i].kill + 1) + "号被杀手杀死，" + (die[i].kill + 1) + "号是" + res[die[i].kill].job;
