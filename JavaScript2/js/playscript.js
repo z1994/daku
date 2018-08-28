@@ -307,9 +307,22 @@ for(i=0;i<num-1;i++){
 
 
 function button_right() {
+    localStorage.setItem('look',1);
     location.href = "./log.html";
 }
 
-function button_left() {
-    confirm("本轮游戏是否已经结束？");
+// function button_left() {
+//     confirm("本轮游戏是否已经结束？");
+//     if( button_left()==turn){
+//         localStorage.clear();
+//         location.href="deal.html";
+//     }
+// }
+function button_left(){
+    if(confirm("本轮游戏是否已经结束？")){
+        localStorage.clear();
+        location.href= "./deal.html";
+    }else{
+        return;
+    }
 }

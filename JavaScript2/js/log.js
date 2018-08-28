@@ -39,13 +39,19 @@ function run() {
 }
 run();
 
-$(document).ready(function () { //jquery语句
-    $('.box').click(function () { //绑定点击事件
-        $('.skill-box').hide(); //隐藏
-        $(this).find($('.skill-box')).show();
-        //显示被点击的盒子下的隐藏内容
+if (!localStorage.getItem('look')) {
+
+
+
+
+    $(document).ready(function () { //jquery语句
+        $('.box').click(function () { //绑定点击事件
+            $('.skill-box').hide(); //隐藏
+            $(this).find($('.skill-box')).show();
+            //显示被点击的盒子下的隐藏内容
+        })
     })
-})
+}
 
 
 
@@ -76,6 +82,9 @@ for (let i = 0; i < arr.length; i++) { //for循环,以数组长度为循环条�
 if (localStorage.getItem('vote') == 1) { //如果get带‘vote’
     header_font.innerHTML = "投票"; //头部HTML样式改为“投票”
     console.log(555)
+}
+if (localStorage.getItem('look')) {
+    header_font.innerHTML = "法官查看";
 }
 
 
@@ -125,74 +134,82 @@ if (!localStorage.getItem('res')) { //如果没有get“res”
 //     console.log(i)
 // }
 
-function footer_box() {
-    var mm = 0;
-    var nn = 0;
-    var w = die.length - 1;
-    if (res[b].life == 'dead') {
-        confirm("当前玩家已死亡，请选择其他玩家");
-        return;
-    }
-    if (localStorage.getItem('vote')) { //vote存在 那就是投票
-        // header_font.innerHTML="投票";//头部HTML样式改为“投票”
-        console.log(555)
-        die[w].tou = b;
-        die.push({});
-        // console.log(JSON.parse(localStorage.getItem('vote')) == undefined)
-        console.log(1)
-        w = w++;
-        localStorage.setItem("key1", JSON.stringify(die)); //保存数据
-        localStorage.removeItem('liu');
-        localStorage.removeItem('vote');
-        res[b].life = 'dead'; //改变life为dead
-        localStorage.setItem('res', JSON.stringify(res)); //保存变量res名为“res”
-    } else { // vote不存在 ，那就杀人逻辑
-        if (arr[b] == "杀手" && header_font.innerHTML == "杀手杀人") {
-            confirm("你是杀手不能杀死本职业，请选择其他玩家杀死")
+if (!localStorage.getItem('look')) {
+    function footer_box() {
+        var mm = 0;
+        var nn = 0;
+        var w = die.length - 1;
+        if(b==undefined){
+            confirm("请选择要操作的玩家")
             return;
-        } else {
-            // dead[b].style.background="red";//杀死为红色
-            console.log(die)
+        }
+        if (res[b].life == 'dead') {
+            confirm("当前玩家已死亡，请选择其他玩家");
+            return;
+        }
+        if (localStorage.getItem('vote')) { //vote存在 那就是投票
+            // header_font.innerHTML="投票";//头部HTML样式改为“投票”
+            console.log(555)
+            die[w].tou = b;
+            die.push({});
+            // console.log(JSON.parse(localStorage.getItem('vote')) == undefined)
+            console.log(1)
+            w = w++;
+            localStorage.setItem("key1", JSON.stringify(die)); //保存数据
+            localStorage.removeItem('liu');
+            localStorage.removeItem('vote');
             res[b].life = 'dead'; //改变life为dead
             localStorage.setItem('res', JSON.stringify(res)); //保存变量res名为“res”
-            // localStorage.getItem('res'); //读取“res”
-            console.log(localStorage.getItem('res'))
-            console.log(res)
-            die[w].kill = b;
-            localStorage.setItem("key1", JSON.stringify(die)); //保存数据
-            localStorage.setItem('liu', 1) //名字为liu，值为1
-        }
-    }
-    for (i = 0; i < res.length; i++) {
-        if (res[i].job == "平民") {
-            if (res[i].life == "c") {
-                mm++;
-                // if (mm == 0) {
-                //     location.href = "over.html";
-                // }
-            }//判断语句不能放在for循环里！！！！！！！！！
-        }
-    
-        if (res[i].job == "杀手") {
-            if (res[i].life == "c") {
-                nn++;
-                // if (nn === 0) {
-                //     location.href = "over.html";
-                // }
+        } else { // vote不存在 ，那就杀人逻辑
+            if (arr[b] == "杀手" && header_font.innerHTML == "杀手杀人") {
+                confirm("你是杀手不能杀死本职业，请选择其他玩家杀死")
+                return;
+            } else {
+                // dead[b].style.background="red";//杀死为红色
+                console.log(die)
+                res[b].life = 'dead'; //改变life为dead
+                localStorage.setItem('res', JSON.stringify(res)); //保存变量res名为“res”
+                // localStorage.getItem('res'); //读取“res”
+                console.log(localStorage.getItem('res'))
+                console.log(res)
+                die[w].kill = b;
+                localStorage.setItem("key1", JSON.stringify(die)); //保存数据
+                localStorage.setItem('liu', 1) //名字为liu，值为1
             }
         }
+        for (i = 0; i < res.length; i++) {
+            if (res[i].job == "平民") {
+                if (res[i].life == "c") {
+                    mm++;
+                    // if (mm == 0) {
+                    //     location.href = "over.html";
+                    // }
+                } //判断语句不能放在for循环里！！！！！！！！！
+            }
+
+            if (res[i].job == "杀手") {
+                if (res[i].life == "c") {
+                    nn++;
+                    // if (nn === 0) {
+                    //     location.href = "over.html";
+                    // }
+                }
+            }
+        }
+        console.log(mm, nn)
+        if (mm == 0 || nn == 0) {
+            // localStorage.setItem('res', JSON.stringify(res));
+            location.href = "over.html";
+        } else {
+            // localStorage.setItem('res', JSON.stringify(res));
+            location.href = "playscript.html";
+        }
     }
-    console.log(mm,nn)
-    if (mm==0||nn==0){
-        // localStorage.setItem('res', JSON.stringify(res));
-        location.href = "over.html";
-    } else{
-        // localStorage.setItem('res', JSON.stringify(res));
+} else {
+    function footer_box() {
+        localStorage.removeItem('look');
         location.href = "playscript.html";
     }
-    
-
-
 }
 
 console.log(b)

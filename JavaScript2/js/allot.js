@@ -58,7 +58,7 @@ function button() {
     }
     console.log(m - 1)
     if (i == arr.length) {
-        location.href = "./home.html";
+        location.href = "./playscript.html";
     }
     console.log()
 }
