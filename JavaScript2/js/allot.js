@@ -64,7 +64,7 @@ function button() {
     }
     
     if (i == arr.length) {
-        location.href = "./playscript.html";
+        location.href = "./player.html";
     }
     console.log()
 }
