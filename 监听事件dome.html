@@ -22,30 +22,48 @@
 </html> -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
+
+</head>
+
+<body>
+    <input type="text" id="myinput" value="8" maxlength="2" onkeyup="value=value.replace(/[^\d]/g,'')">
+
+
+    <!-- 第一种方法： -->
     <script>
-        window.onload=function(){
-            var oUl=document.getElementById("ull");
-            var aLi=oUl.getElementsByTagName('li');
-            for (var i=0;i<aLi.length;i++){
-                aLi[i].onclick=function(){
-                    alert(123);
-                }
-            }
+        // var input = document.getElementById('myinput') //获取节点
+        // var x;
+        // input.oninput=function(){
+        //     x=input.value;
+        // }
+
+
+        
+
+        // 第二种方法：
+
+        var input = document.getElementById('myinput')
+
+        function change() {
+            var x = document.getElementById("myinput").value;
+            console.log(x)
+        }
+
+        change() //先运行一遍
+
+        input.oninput = function myf() { //监听事件，随时获取值
+            change()
         }
     </script>
-</head>
-<body>
-    <ul id="ull">
-    <li>11</li>
-    <li>22</li>
-    <li>33</li>
-    <li>44</li>
-</ul>
+
+
 </body>
-</html><img src="" alt="">
+
+</html>

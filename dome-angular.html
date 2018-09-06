@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/angular.js/1.4.6/angular.min.js"></script> 
+</head>
+<body>
+
+<!-- <div ng-app>
+<p>我的第一个表达式: {{ 5 + 5 }}</p>
+</div> -->
+
+<!-- <div ng-app="" ng-init="x=3;y=9">
+    <p>总价：{{x*y}}</p>
+</div> -->
+
+<!-- <div ng-app="" ng-init="x=2;y=3">
+     <p>总价：
+         <span ng-bind="x*y"></span>
+     </p>
+</div> -->
+
+<!-- <div ng-app="" ng-init="x='JJ';y='GG'">
+    <p>
+        姓名：{{x+y}}
+    </p>
+</div>
+
+<div ng-app="" ng-init="x='JJ';y='GG'">
+    <p>姓名：
+        <span ng-bind="x+''+y"></span>
+    </p>
+</div> -->
+
+<!-- <div ng-app="" ng-init="person={a:'JJ',b:'GG'}">
+<p>
+    选择{{person.b}}
+</p>
+</div> -->
+
+<!-- <div ng-app="" ng-init="person={a:'JJ',b:'GG'}">
+    <p>
+        <span ng-bind="person.a"></span>
+    </p>
+</div> -->
+
+<!-- <div ng-app="" ng-init="num=[0,8,10,13,17,25,29]">
+    <p>取第二位：
+        <span ng-bind="num[1]"></span>
+    </p>
+</div> -->
+
+<!-- <div ng-app="" ng-init="name='delaiwen'">
+    <p>姓名：<input type="text" ng-model="name"></p>
+    <p>输入的值为：{{name}}</p>
+</div> -->
+<!-- angular的监听事件 -->
+
+<!-- <div ng-app="" ng-init="x=5;y=3">
+    <h3>价格计算器</h3>
+    数量：<input type="number" ng-model="x">
+    单价：<input type="number" ng-model="y">
+
+    <p>总价：{{x*y}}</p>
+</div> -->
+
+<div ng-app="" ng-init="names=[1,2,3,4,5]">
+    <div ng-repeat="x in names">
+        {{x}}
+    </div>
+</div>
+
+</body>
+</html>

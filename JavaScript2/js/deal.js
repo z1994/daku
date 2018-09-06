@@ -26,7 +26,7 @@ function change() { //创建一个人数分配函数组
 
 change() //先运行一遍
 
-input.oninput = function myf() {
+input.oninput = function myf() {//监听事件，随时获取值
     change()
 }
 
