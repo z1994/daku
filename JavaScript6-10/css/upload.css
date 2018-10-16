@@ -1,0 +1,86 @@
+img {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  background: #e7e7e7;
+}
+
+.up-input {
+  height: 2rem;
+  width: 15%;
+  border-color: #999;
+  border-radius: .5rem;
+}
+
+.main-box {
+  padding: 1.5%;
+  height: 12rem;
+  font-weight: 600;
+  border: #000 solid 1px;
+  background: #fff;
+}
+.main-box .up {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.3rem;
+}
+.main-box .up .line {
+  height: 1px;
+  width: 1.5rem;
+  border: solid 2px #000;
+}
+.main-box .botton {
+  position: absolute;
+  top: 9rem;
+}
+.main-box .up-td {
+  border-left: solid 1px #000;
+}
+.main-box #fileId0 {
+  font-size: 3rem;
+}
+.main-box #fileId1 {
+  position: absolute;
+  right: 0;
+  width: 4.5rem;
+  top: 13.9rem;
+  opacity: 0;
+}
+.main-box .up-main {
+  margin-top: 6rem;
+  border: #000 solid 1px;
+}
+.main-box .up-main .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  border: solid #000 1px;
+}
+.main-box .up-main .main-content {
+  padding: 3%;
+}
+.main-box .up-main .main-content .up-table {
+  background: #fff;
+}
+.main-box .up-main .main-content .up-table .up-tr {
+  text-align: center;
+  border: #000 1px solid;
+}
+.main-box .up-main .main-content .up-table .up-tr .up-td {
+  border-left: solid 1px #000;
+}
+.main-box .up-main .main-content .up-table .up-tr .num {
+  width: 6%;
+  border-left: solid 1px #000;
+}
+.main-box .up-main .main-content .up-table .up-tr .img {
+  margin: 0 3%;
+  width: 27%;
+  border-left: solid 1px #000;
+}
+
+/*# sourceMappingURL=upload.css.map */

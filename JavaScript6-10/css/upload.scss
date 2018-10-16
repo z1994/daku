@@ -1,0 +1,155 @@
+img {
+    width: 100%;
+}
+
+@mixin between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    background: #e7e7e7;
+}
+
+.up-input {
+    height: 2rem;
+    width: 15%;
+    border-color: #999;
+    border-radius: .5rem;
+}
+
+// header {
+//     border-bottom: 1px solid #000;
+
+//     .header-box {
+//         height: 5rem;
+//         @include between();
+
+//         .header-left {
+//             font-size: 1.7rem;
+//             color: #000;
+//         }
+
+//         .header-right {
+//             color: blue;
+//         }
+//     }
+// }
+
+
+
+// .nav {
+//     display: inline-block;
+//     padding: 0;
+//     margin: 0;
+//     width: 100vw;
+//     height: 100%;
+//     color: #337ab7;
+
+//     ul {
+//         display: inline-block;
+//         padding: 0;
+//         margin: 0;
+//         list-style: none;
+//         width: 100%;
+
+//         .nav-box {
+//             @include between();
+//             line-height: 3rem;
+//             border-bottom: 1px solid #000;
+
+//             .nav-font {
+//                 margin-left: 1rem;
+//             }
+
+//             .arrow {
+//                 width: 15px;
+//                 height: 15px;
+//                 border-left: 2px solid #000;
+//                 border-bottom: 2px solid #000;
+//                 transform: rotate(225deg);
+//             }
+//         }
+//     }
+// }
+
+.main-box {
+    padding: 1.5%;
+    height: 12rem;
+    font-weight: 600;
+    border: #000 solid 1px;
+    background: #fff;
+
+    .up {
+        @include between();
+        margin-top: 1.3rem;
+
+        .line {
+            height: 1px;
+            width: 1.5rem;
+            border: solid 2px #000;
+        }
+
+    }
+
+
+
+    .botton {
+        position: absolute;
+        top: 9rem;
+
+    }
+
+    .up-td {
+        border-left: solid 1px #000;}
+        #fileId0{
+            font-size: 3rem;
+        }
+        #fileId1{
+            position: absolute;
+            right: 0;
+            width: 4.5rem;
+            top: 13.9rem;
+            opacity: 0;
+        
+    }
+.up-main{
+    margin-top: 6rem;
+    border: #000 solid 1px;
+    .title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 3rem;
+        border: solid #000 1px;
+    }
+    .main-content{
+        padding: 3%;
+    .up-table {
+        background: #fff;
+
+        .up-tr {
+            text-align: center;
+            border: #000 1px solid;
+            .up-td {
+                border-left: solid 1px #000;}
+            
+
+            // td{
+            //     border-left: solid 1px #fff;
+            .num {
+                width: 6%;
+                border-left: solid 1px #000;
+            }
+
+            .img {
+                margin: 0 3%;
+                width: 27%;
+                border-left: solid 1px #000;
+            }
+        }
+
+    }
+}}}

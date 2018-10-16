@@ -1,0 +1,207 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="JavaScript6-10/js/min/angular.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <table class="am-table am-table-striped am-table-hover table-main">
+        <thead>
+            <tr>
+                <th>name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in houses | limitTo:listsPerPage">
+                <td>{{item.c}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="am-cf">
+        共 {{dataNum}} 条记录/当前第 {{currentPage+1}} 页 共 {{pages}} 页
+        <div class="am-fr">
+            <ul class="am-pagination">
+                <li><a href="javascript:;" rel="external nofollow" rel="external nofollow" ng-click="prevPage()">«</a></li>
+                <li><a href="javascript:;" rel="external nofollow" rel="external nofollow" ng-click="nextPage()">»</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script> 
+        var app = angular.module("myApp", []); 
+        app.controller("mainController", function ($scope, $http) { 
+          //测试数据 
+          var $data = {"fs":[{"c":"张一"},{"c":"张二"},{"c":"张三"},{"c":"张四"},{"c":"李一"},{"c":"李二"},{"c":"李三"},{"c":"李四"},{"c":"王一"},{"c":"王二"},{"c":"王三"},{"c":"王四"}]}; 
+          $scope.currentPage = 0;//设置当前页是 0 
+          $scope.listsPerPage = 3;//设置每页显示3个 
+          //上一页 
+          $scope.prevPage = function(){ 
+            if($scope.currentPage > 0){ 
+              $scope.currentPage--; 
+            } 
+          } 
+          //下一页 
+          $scope.nextPage = function(){ 
+            if ($scope.currentPage < $scope.pages-1){ 
+              $scope.currentPage++; 
+            } 
+          } 
+          //监听搜索条件 
+          $scope.$watch('search.c', function(){ 
+            $scope.currentPage = 0; 
+            searchResult(); 
+          }); 
+          //监听翻页 
+          $scope.$watch('currentPage', function(){ 
+            searchResult(); 
+          }); 
+          //搜索或翻页结果 
+          function searchResult(){ 
+            var out = []; 
+            if($scope.search){ 
+              angular.forEach($data.fs,function(k,v){ 
+                if(k.c.indexOf($scope.search.c)>-1){ 
+                  out.push(k); 
+                } 
+              }); 
+            } 
+            else{ 
+              out = $data.fs; 
+            } 
+            $scope.houses = out.slice($scope.currentPage*$scope.listsPerPage); 
+            $scope.dataNum = out.length; 
+            $scope.pages = Math.ceil($scope.dataNum/$scope.listsPerPage); 
+          } 
+        }); 
+          
+        </script> 
+    
+
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html>
+    
+
+<head>
+            
+    <meta charset="utf-8" />
+            <title>week3</title>
+            <script type="text/javascript" src="JavaScript6-10/js/min/angular.js"></script>
+            
+        </head>
+    
+
+<body>
+
+    <body ng-app="myApp" ng-controller="myCtrl">
+                <center>
+                        <h3>商品库存管理系统</h3>
+                        <div>
+                            <input type="text" placeholder="请输入关键词搜索" ng-model="serch" />
+                               <select ng-model="order" ng-change="selectAll()">
+                                    <option value="num">按货物数量正序排序</option>
+                                    <option value="-num">按货物数量反序排序</option>
+                                    <option value="datae">按货物入库时间正序排序</option>
+                                    <option value="-datae">按货物入库时间反序排序</option>
+                                </select>
+                            <button style="background:#99FF00; margin-left: 100px;" ng-click="tian">入库</button>
+                            <input type="button" value="批量删除" id="piliang" ng-click="pi()" />
+                            </div>
+                        <table border="1" cellpadding="10px" cellspacing="0">
+                                <thead>
+                                        <tr>
+                                            <td>货物名称</td>
+                                            <td>货物数量</td>
+                                            <td>货物产地</td>
+                                            <td>货物单价</td>
+                                            <td>货物入库时间日期</td>
+                                            <td>操作</td>
+                                            </tr>
+                                    </thead>
+                                
+
+
+                                    <tr ng-repeat="us in goods | filter:serch | orderBy:(orderFlag+orderLine) ">
+                                            <td>{{us.name}}</td>
+                                            <td>{{us.num}}</td>
+                                            <td>{{us.address}}</td>
+                                            <td>{{us.price|currency:"￥"}}</td>
+                                            <td>{{us.datae}}</td>
+                                            <td><button ng-click="del(us.name)">删除</button></td>
+                                        </tr>
+                                </body>
+                </table>
+            </center>
+            <script type="text/javascript">
+        var mo = angular.module("myApp", []);
+        mo.controller("myCtrl", function ($scope) {
+            $scope.goods = [{
+                "name": "云南白药",
+                "num": 100,
+                "address": "云南",
+                "price": 19.9,
+                "datae": "2017-11-20 09:32:21"
+            }, {
+                "name": "999感冒灵",
+                "num": 30,
+                "address": "北京",
+                "price": 12.5,
+                "datae": "2017-11-20 10:32:21"
+            }, {
+                "name": "感康",
+                "num": 20,
+                "address": "河北",
+                "price": 16.6,
+                "datae": "2017-11-20 11:11:11"
+            }];
+
+
+            //删除
+            $scope.del = function (delName) {
+                for (index in $scope.goods) {
+                    if (delName == $scope.goods[index].name) {
+                        if (window.confirm("确实要删除吗?")) {
+                            if (window.confirm("删除成功")) {
+                                $scope.goods.splice(index, 1);
+                            }
+                        }
+                    } else {
+
+                    }
+                }
+            }
+
+            //定义下拉菜单的排序
+            $scope.order;
+            $scope.selectAll = function () {
+                if ($scope.order == "num") {
+                    $scope.orderFlag = ""
+                    $scope.orderLine = "num"
+                } else if ($scope.order == "-num") {
+                    $scope.orderFlag = "-"
+                    $scope.orderLine = "num"
+                } else if ($scope.order == "datae") {
+                    $scope.orderFlag = ""
+                    $scope.orderLine = "datae"
+                } else if ($scope.order == "-datae") {
+                    $scope.orderFlag = "-"
+                    $scope.orderLine = "datae"
+                }
+            }
+
+        });
+    </script>
+        
+</body>
+
+</html>

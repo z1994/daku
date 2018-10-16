@@ -1,0 +1,82 @@
+<div ng-controller="myCtrl">
+    <div class="main-box">
+        <div class="up">
+            <span>标&#8195;&#8195;题</span>
+            <input class="up-input" type="text" ng-model="title1" >
+            <span>发布时间</span>
+            <input class="up-input" type="text" ng-model="start1">
+            <span class="line"></span>
+            <input class="up-input" type="text" ng-model="end1">
+
+        </div>
+        <div class="up">
+            <span>类&#8195;&#8195;型</span>
+            <select class="up-input" type="text" ng-model="type1" ng-options="a.num as a.type  for a in names">
+                </select>
+            <span>状&#8195;&#8195;态</span>
+            <select class="up-input" type="text" ng-model="status1" ng-options="b.num as b.status  for b in industry">
+                </select>
+
+            <span>发布者</span>
+            <input class="up-input" type="text" ng-model="author1">
+        </div>
+
+        <div class="botton">
+            <button>清空</button>
+            <button ng-click="seek()">搜索</button>
+        </div>
+
+
+        <div class="up-main">
+
+
+
+
+            <div class="title">
+                <span>Article管理</span>
+                <button id="#fileId0" ng-click="new()">新增</button>
+            </div>
+            <!-- <input id="fileId1" type="file" accept="image/png,image/gif" name="file" /></div> -->
+
+            <div class="main-content">
+                <table class="up-table">
+
+
+                    <tr class="up-tr">
+                        <td class="up-td">序号</td>
+                        <td class="up-td">图片</td>
+                        <td class="up-td">创建者</td>
+                        <td class="up-td">类型</td>
+                        <td class="up-td">标题</td>
+                        <td class="up-td">修改时间</td>
+                        <td class="up-td">状态</td>
+                        <td class="up-td">操作</td>
+                    </tr>
+                    <tr class="up-tr" ng-repeat="x in response">
+                        <td class="num">{{$index|indexFilter}}</td>
+                        <td class="img"><img src="{{x.img}}"></td>
+                        <td class="up-td">{{x.title}}</td>
+                        <!-- 标题 -->
+                        <td class="up-td">{{x.type|typeFilter}}</td>
+                        <!-- 类型 -->
+                        <td class="up-td">{{x.createAt|date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                        <!-- 上线时间 -->
+                        <td class="up-td">{{x.updateAt|date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                        <!-- 修改时间 -->
+                        <!-- <td>{{x.auther}}</td> -->
+                        <td class="up-td">{{x.status|statusFilter}}</td>
+                        <!-- 状态 -->
+                        <td class="up-td">
+
+                            <button ng-click="del()">删除</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+
+
+    </div>
+</div>

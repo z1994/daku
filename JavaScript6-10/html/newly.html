@@ -1,0 +1,88 @@
+<div class="new-table" ng-controller="ss">
+    <span class="new-title">新增Article</span>
+
+    <div class="new-content">
+        <form name="abc">
+            <span class="content">标题名称
+                <input type="text" required ng-model='title'>
+            </span>
+            <span class="content">类&#8195;&#8195;型
+                <select ng-model="type" ng-options="b.num as b.type  for b in names">
+                </select>
+            </span>
+
+            <span class="content">行&#8195;&#8195;业
+                <select ng-model="industry1" ng-options="c.num as c.industry  for c in industry">
+                    <!-- 与ngjs绑定，值为industry1，下拉框内是引用的filter文件内的常量“articleContant”
+                        里的“industryltem”的值。 -->
+                </select>
+            </span>
+
+            <span class="content">说&#8195;&#8195;明
+                <input type="text" required ng-model='content1'>
+            </span>
+            <span class="content">跳转链接
+                <input type="text" required ng-model='url1'>
+            </span>
+
+
+        </form>
+
+
+        <form name="myForm">
+            <div class="content">配&#8195;&#8195;图
+                <span class="change">选择文件</span>
+
+                <input type="file" class="Upload" ngf-select ng-model="picFile" name="file" accept="image/*"
+                    ngf-max-size="2MB" required ngf-model-invalid="errorFile" ng-change="uploadImg()" required>
+                <i ng-show="myForm.file.$error.maxSize">
+                    {{errorFile.size / 1000000|number:1}}MB: max 2M</i>
+            </div>
+            <img class="new-img" ng-show="myForm.file.$valid" ngf-thumbnail="picFile" class="thumb">
+            <!-- <div>
+                <input ng-disabled="abc.$invalid" ng-click="immediate()" type="submit" value="提交" />
+                提交按键 
+            </div> -->
+            </table>
+        </form>
+
+
+
+
+        <table class="form1">
+
+            <tr class="form2">
+                <td class="form3">图片名</td>
+                <td class="form3">文件大小</td>
+                <td class="form3">进度</td>
+                <td class="form3">操作</td>
+            </tr>
+            <tr class="form2">
+                <td class="form3">{{name}}</td>
+                <td class="form3">{{size}}</td>
+                <td class="form3">
+                    <div class="progress" ng-show="picFile.progress >= 0">
+                        <div class="progress" ng-bind="picFile.progress + '%'"></div>
+                    </div>
+                    <!-- 进度条 -->
+                    <span ng-show="picFile.result">上传成功</span>
+                    <!-- 上传成功提示 -->
+                </td>
+                <td class="form3">
+                    <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
+                    <button class="button-uploading" ng-disabled="!myForm.$valid" ng-click="uploadPic(picFile)">上传</button>
+                    <button class="button-delete" ng-disabled="!myForm.$valid" ng-click="delete()">删除</button>
+                </td>
+            </tr>
+        </table>
+
+        <div class="status" >
+            <!-- <button class="stat" ng-click="up()">上线</button>
+            <button class="stat" ng-click="draft()">草稿</button> -->
+            <input ng-disabled="abc.$invalid" ng-click="immediate1()" ng-model="immediate1" type="submit" value="提交" />
+            <input ng-disabled="abc.$invalid" ng-click="immediate2()" ng-model="immediate2" type="submit" value="草稿" />
+        </div>
+
+
+    </div>
+</div>

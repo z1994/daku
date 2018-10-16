@@ -1,0 +1,69 @@
+.new-table {
+  border: solid 1px #000;
+  background: #fff;
+}
+.new-table .new-title {
+  display: inline-block;
+  width: 100%;
+  line-height: 2rem;
+  border-bottom: solid 1px #000;
+  background: #e7e7e7;
+}
+.new-table .new-content {
+  display: flex;
+  flex-direction: column;
+  margin: 10rem 5%;
+}
+.new-table .new-content .new-img {
+  width: 15rem;
+}
+.new-table .new-content .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20rem;
+  margin: 1rem 2rem;
+}
+.new-table .new-content .content .change {
+  display: inline-block;
+  width: 9rem;
+  line-height: 6rem;
+  text-align: center;
+  border: solid 1px #000;
+}
+.new-table .new-content .content .Upload {
+  position: absolute;
+  width: 15rem;
+  top: 30rem;
+  left: 26%;
+  opacity: 0;
+}
+.new-table .new-content .form1 {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  border: solid 1px #000;
+}
+.new-table .new-content .form1 .form2 {
+  display: flex;
+  justify-content: space-between;
+}
+.new-table .new-content .form1 .form2 .form3 {
+  width: 25%;
+  border: solid 1px #000;
+}
+.new-table .new-content .status {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  width: 30%;
+}
+.new-table .new-content .status .stat {
+  width: 5rem;
+  line-height: 2rem;
+  text-align: center;
+  border: solid 1px #000;
+  background: #e7e7e7;
+}
+
+/*# sourceMappingURL=newly.css.map */

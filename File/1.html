@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/angular.js/1.4.6/angular.min.js"></script>
+    <script src="../JavaScript6-10/js/file/ng-file-upload-shim.min.js"></script> <!-- for no html5 browsers support -->
+    <script src="../JavaScript6-10/js/file/ng-file-upload.min.js"></script>
+
+    <style>
+       .thumb {
+    width: 24px;
+    height: 24px;
+    float: none;
+    position: relative;
+    top: 7px;
+}
+
+form .progress {
+    line-height: 15px;
+}
+
+
+.progress {
+    display: inline-block;
+    width: 100px;
+    border: 3px groove #CCC;
+}
+
+.progress div {
+    font-size: smaller;
+    background: orange;
+    width: 0;
+}
+    </style>
+</head>
+
+<body ng-app="app" ng-controller="my">
+    
+
+<form name="myForm">
+        <strong>配&emsp;&emsp;图</strong>
+        <input type="file" class="Upload" ngf-select ng-model="picFile" name="file" accept="image/*"
+            ngf-max-size="2MB" required ngf-model-invalid="errorFile" ng-change="uploadImg()" required>
+        <i ng-show="myForm.file.$error.maxSize">
+            {{errorFile.size / 1000000|number:1}}MB: max 2M</i>
+        <img ng-show="myForm.file.$valid" ngf-thumbnail="picFile" class="thumb">
+    
+    <div class="progress" ng-show="picFile.progress >= 0">
+            <span class="progress" ng-bind="picFile.progress + '%'"></span>
+        </div>
+        <span ng-show="picFile.result">上传成功</span>
+        <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
+        <button class="button-uploading" ng-disabled="!myForm.$valid" ng-click="uploadPic(picFile)">上传</button>
+        <button class="button-delete" ng-disabled="!myForm.$valid" ng-click="delete()">删除</button>
+</form>
+
+</body>
+
+<script>
+var app=angular.module('app', ['ngFileUpload']);
+app.controller('my',function($scope){
+         $scope.uploadPic = function (file) { //图片上传
+            file.upload = Upload.upload({ //post请求
+                url: '/carrots-admin-ajax/a/u/img/task',
+                data: {
+                    username: $scope.username,
+                    file: file,
+                },
+            });
+            file.upload.then(function (response) {
+                $timeout(function () { //获取返回的url
+                    file.result = response.data.data.url;
+                    url = file.result;
+                    console.log(url)
+                });
+            }, function (response) {
+                if (response.status > 0)
+                    $scope.errorMsg = response.status + ': ' + response.data;
+            }, function (evt) {
+                // Math.min is to fix IE which reports 200% sometimes
+                file.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
+            });
+        }
+
+})
+
+
+
+
+    
+</script>
+
+
+</html>

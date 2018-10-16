@@ -1,0 +1,10 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+$width:#fff;
+@mixin flex-center ($just:center) {
+    display: flex;
+    justify-content: $just;
+    align-items: center;
+}

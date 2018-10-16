@@ -1,0 +1,80 @@
+// @import"_reste";
+
+@mixin between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    background: #e7e7e7;
+}
+
+header {
+    border-bottom: 1px solid #000;
+
+    .header-box {
+        height: 5rem;
+        @include between();
+
+        .header-left {
+            font-size: 1.7rem;
+            color: #000;
+        }
+
+        .header-right {
+            color: blue;
+        }
+    }
+}
+
+.nav {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    color: #337ab7;
+
+    .container {
+        padding: 0;
+        margin: 0;
+        @media(min-width: 768px) {
+            max-width: 100%;
+        }
+        ul {
+            display: inline-block;
+            margin: 0;
+            list-style: none;
+            width: 100%;
+            .nav-box {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                line-height: 3rem;
+                border-bottom: 1px solid #000;
+                .nav-font {
+                    flex: 0 0 35%;
+                    text-align: center;
+                }
+                .arrow {
+                    width: 15px;
+                    height: 15px;
+                    border-left: 2px solid #000;
+                    border-bottom: 2px solid #000;
+                    transform: rotate(225deg);
+                }
+            }
+        }
+    }
+}
+
+.main {
+    padding: 1rem;
+    height: 50vw;
+    border: 1px solid #000;
+    background: #fff;
+    .welcome{
+        font-size: 3rem;
+    }
+}

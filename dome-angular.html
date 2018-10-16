@@ -64,11 +64,127 @@
     <p>总价：{{x*y}}</p>
 </div> -->
 
-<div ng-app="" ng-init="names=[1,2,3,4,5]">
+<!-- <div ng-app="" ng-init="names=[1,2,3,4,5]">
     <div ng-repeat="x in names">
         {{x}}
     </div>
+</div> -->
+
+<!-- <div ng-app="myapp" ng-controller="myct">
+    名字：<input ng-model="name">
 </div>
+<script>
+    var app=angular.module('myapp',[]);
+    app.controller('myct',function($scope){
+        $scope.name="qwer";
+    });
+</script> -->
+
+<!-- <form ng-app="" name="myform">
+    Email:
+    <input type="email" name="myaddress" ng-model="text">
+    <span ng-show="myform.myaddress.$error.email">不是一个合法的邮箱地址</span>
+</form>
+<p>在输入框中输入你的邮箱地址，如果不是一个合法的邮箱地址，会弹出提示信息</p>
+
+<div ng-app="myapp" ng-></div> -->
+
+
+<!-- <div ng-app="myapp" ng-controller="myct">
+    names:{{first+""+last}}
+</div>
+<script>
+    var app=angular.module('myapp',[]);
+    app.controller('myct',function($scope){
+        $scope.first="jj";
+        $scope.last="gg";
+    })
+</script> -->
+
+
+
+
+
+ <!-- <div ng-app="myapp" ng-controller="myct">
+     名字：<input ng-model="name">
+     <h2>你输入了：{{name}}</h2>
+ </div>
+
+ <script>
+     var app=angular.module('myapp',[]);
+     app.controller('myct',function($scope){
+         $scope.name="2222222"
+     })
+ </script> -->
+
+ <!-- <div ng-app="myapp" ng-controller="myct">
+     名字：<input type="text" ng-model="name">
+ </div>
+
+<script>
+    var app=angular.module('myapp',[]);
+    app.controller('myct',function($scope){
+        $scope.name="qwer";
+    })
+</script> -->
+
+
+<!-- <div ng-app="myapp" ng-controller="myct">
+    名字：<input type="text" ng-model="name">
+</div>
+
+<script>
+    var app=angular.module('myapp',[]);
+    app.controller('myct',function($scope){
+        $scope.name="jj gg";
+    })
+</script> -->
+
+
+<!-- <div ng-app="myapp" ng-controller="myct">
+    数量：<input type="number" ng-model="q">
+    价格：<input type="number" ng-model="p">
+    <p>总价={{(q*p)|currency}}</p>
+</div>
+<script>
+var app=angular.module('myapp',[]);
+app.controller('myct',function($scope){ 
+    $scope.q=2;
+    $scope.p=55;
+});
+</script> -->
+
+<!-- <div ng-app="myapp" ng-controller="myct">
+    姓名：<input type="text" ng-model="name">
+   {{name|currency}} 
+</div>
+
+
+<script>
+var app=angular.module('myapp',[]);
+app.controller('myct',function($scope){
+    $scope.name=555;
+})
+</script> -->
+
+
+<div ng-app="app" ng-controller="per">
+    <button ng-click="hide()">隐藏/显示</button>
+    
+    <p ng-hide="my">
+        第一个：<input type="text" ng-model="one"><br>
+        第二个：<input type="text" ng-model="two"><br>
+        一加二:{{one+""+two}}
+    </p>
+</div>
+
+<script>
+    var app=angular.module('app',[]);
+    app.controller
+
+</script>
+
+
 
 </body>
 </html>

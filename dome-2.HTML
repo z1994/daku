@@ -1,44 +1,209 @@
-<!DOCTYPE html>
+<div class="new-table" ng-controller="ss">
+        <span class="new-title">新增Article</span>
+    
+        <div class="new-content">
+            <form name="abc">
+                <span class="content">标题名称
+                    <input type="text" required ng-model='title'>
+                </span>
+                <span class="content">类&#8195;&#8195;型
+                    <select ng-model="type" ng-options="b.num as b.type  for b in names">
+                    </select>
+                </span>
+    
+                <span class="content">行&#8195;&#8195;业
+                    <select ng-model="industry1" ng-options="c.num as c.industry  for c in industry">
+                    </select>
+                </span>
+                <!-- <span class="content">状&#8195;&#8195;态
+                    <select ng-model="status1" ng-options="d.num as d.status  for d in status">
+                    </select>
+                </span> -->
+    
+                <span class="content">说&#8195;&#8195;明
+                    <input type="text" required ng-model='content1'>
+                </span>
+                <span class="content">跳转链接
+                    <input type="text" required ng-model='url1'>
+                </span>
+                <!-- 
+                <div>
+                   
+                    <input ng-disabled="abc.$invalid" ng-click="immediate()" type="submit" value="提交" />
+                </div> -->
+            </form>
+    
+            <form name="form">
+                <div class="content">配&#8195;&#8195;图
+                    <span class="change">选择文件</span>
+    
+                    <input type="file" class="Upload" ngf-select ng-model="picFile" name="file" accept="image/*"
+                        ngf-max-size="2MB" required ngf-model-invalid="errorFile" ng-change="uploadImg()" required>
+                    <i ng-show="myForm.file.$error.maxSize">
+                        {{errorFile.size / 1000000|number:1}}MB: max 2M</i>
+                </div>
+                <img class="new-img" ng-show="myForm.file.$valid" ngf-thumbnail="picFile" class="thumb">
+    </form>
+    
+    
+                <table class="form1">
+                   
+                    <tr class="form2">
+                        <td class="form3">图片名</td>
+                        <td class="form3">文件大小</td>
+                        <td class="form3">进度</td>
+                        <td class="form3">操作</td>
+                    </tr>
+                    <tr class="form2">
+                        <td class="form3">1</td>
+                        <td class="form3">2</td>
+                        <td class="form3">
+                            <div class="progress" ng-show="picFile.progress >= 0">
+                                <div class="progress" ng-bind="picFile.progress + '%'"></div>
+                                </div>
+                            </td>
+                        <td class="form3">
+                            <button class="button-uploading" ng-disabled="!myForm.$valid" ng-click="uploadPic(picFile)">上传</button>
+                            <button class="button-delete" ng-disabled="!myForm.$valid" ng-click="delete()">删除</button>
+                        </td>
+                    </tr>
+                </table>
+    
+                <div>
+                        <input ng-disabled="abc.$invalid" ng-click="immediate()" type="submit" value="提交" />
+                    </div>
+    
+    
+    
+               <!-- <div class="progress" ng-show="picFile.progress >= 0">
+                    <span class="progress" ng-bind="picFile.progress + '%'"></span>
+                </div>
+                <span ng-show="picFile.result">上传成功</span>
+                <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
+                <button class="button-uploading" ng-disabled="!myForm.$valid" ng-click="uploadPic(picFile)">上传</button>
+                <button class="button-delete" ng-disabled="!myForm.$valid" ng-click="delete()">删除</button>
+            </form> -->
+    
+    
+    
+    
+    
+    
+    
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-        crossorigin="anonymous">
 </head>
-<style>
-    .zdy{
-        display: inline-block;
-        width: 20%;
-        height: 3rem;
-        border: solid 1px #999; 
-        background: red;       
-    }
-    @media(max-width:768px){
-        .zdy{
-            width: 100%;
-            border:solid 1px #000;
-            background: #999;
-        }
-    }
-</style>
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="zdy"></div>
-            <div class="zdy"></div>
-            <div class="zdy"></div>
-            <div class="zdy"></div>
-            <div class="zdy"></div>
-        </div>
+<body> -->
+<!-- <table class="new-table">
+                
+                    <div class="new-title">
+                        
+                        新增Article
+                        </div>
+                    <tr>
+                        <td>标题名称
+                            <input type="text">
+                        </td>
+                        <td>类型
+                            <input type="text">
+                        </td>
+                        <td>说明
+                            <input type="text">
+                        </td>
+                        <td>跳转链接
+                            <input type="text">
+                        </td>
+                        <td>配图 选择文件</td>
+                    </tr> 
+                
+                </table> -->
+
+<div class="new-table" ng-controller="ss">
+    <span class="new-title">新增Article</span>
+
+    <div class="new-content">
+        <form name="abc">
+            <span class="content">标题名称
+                <input type="text" required ng-model='title'>
+            </span>
+            <span class="content">类&#8195;&#8195;型
+                <select ng-model="type" ng-options="b.num as b.type  for b in names">
+                </select>
+            </span>
+
+            <span class="content">行&#8195;&#8195;业
+                    <select ng-model="industry1" ng-options="c.num as c.industry  for c in industry">
+                        </select>
+            </span>
+            <!-- <span class="content">状&#8195;&#8195;态
+                <select ng-model="status1" ng-options="d.num as d.status  for d in status">
+                </select>
+            </span> -->
+
+            <span class="content">说&#8195;&#8195;明
+                <input type="text" required ng-model='content1'>
+            </span>
+            <span class="content">跳转链接
+                <input type="text" required ng-model='url1'>
+            </span>
+
+            <div>
+                <!-- <span class="pro" ng-model="e" ng-click="up()">立即上线</span> -->
+                <input ng-disabled="abc.$invalid" ng-click="immediate()" type="submit" value="提交" />
+            </div>
+        </form>
+
+        <form name="myForm">
+            <span class="content">配&#8195;&#8195;图
+                <span>选择文件</span>
+
+                <input type="file" class="Upload" ngf-select ng-model="picFile" name="file" accept="image/*"
+                    ngf-max-size="2MB" required ngf-model-invalid="errorFile" ng-change="uploadImg()" required>
+                <i ng-show="myForm.file.$error.maxSize">
+                    {{errorFile.size / 1000000|number:1}}MB: max 2M</i>
+                <img class="new-img" ng-show="myForm.file.$valid" ngf-thumbnail="picFile" class="thumb">
+            </span>
+            <div class="progress" ng-show="picFile.progress >= 0">
+                <span class="progress" ng-bind="picFile.progress + '%'"></span>
+            </div>
+            <span ng-show="picFile.result">上传成功</span>
+            <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
+            <button class="button-uploading" ng-disabled="!myForm.$valid" ng-click="uploadPic(picFile)">上传</button>
+            <button class="button-delete" ng-disabled="!myForm.$valid" ng-click="delete()">删除</button>
+        </form>
+
+
+
+
+        <!-- <form name="myForm">
+                <strong>配&emsp;&emsp;图</strong>
+                <input type="file" class="Upload" ngf-select ng-model="picFile" name="file" accept="image/*"
+                    ngf-max-size="2MB" required ngf-model-invalid="errorFile" ng-change="uploadImg()" required>
+                <i ng-show="myForm.file.$error.maxSize">
+                    {{errorFile.size / 1000000|number:1}}MB: max 2M</i>
+                <img class="new-img" ng-show="myForm.file.$valid" ngf-thumbnail="picFile" class="thumb">
+            </form> -->
+
+
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-    crossorigin="anonymous"></script>
-</body>
-</html>
+</div>
+
+<!-- </body>
+</html> -->

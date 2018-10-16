@@ -1,0 +1,439 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./JavaScript6-10/js/min/angular.js"></script>
+    <style>
+        .col-form {
+            padding: 5% 2%;
+            margin-bottom: 10%;
+        }
+
+        .col-form .list label {
+            margin-bottom: 0.2rem;
+            border-radius: 0.5rem;
+        }
+
+        .col-form .list input {
+            font: normal 1rem fzltxhjw;
+        }
+
+        .item-my-style {
+            padding: 0.5rem;
+        }
+
+        .row-code {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .button.code-btn {
+            margin: 0;
+            border-radius: 0.5rem;
+            background-color: #ffba07;
+            color: #51110a;
+        }
+
+        .col-mobile {
+            padding-left: 0;
+        }
+
+        .col-code {
+            padding-right: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="row row-form">
+        <div class="col col-form">
+            <div class="list">
+                <div class="row row-code">
+                    <div class="col col-60 col-mobile"> <label class="item item-input mobile-btn"> <input type="text"
+                                placeholder="手机号" name="mobile_num" id="mobile_num" ng-model="mobileNum"> </label>
+                    </div>
+                    <div class="col col-40 col-code"> <input type="button" class="button button-block code-btn" id="get_num_btn"
+                            ng-click="getCode()" ng-value="info" ng-disabled="isDisabled"> </div>
+                </div> <label class="item item-input"> <input type="text" placeholder="验证码" name="check_num" id="check_num"
+                        ng-model="codeNum"> </label> <button class="button button-block button-my-style" id="submit_btn"
+                    ng-click="submit()" ng-disabled="isSubmitted">提 交</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+<script>
+    var myApp = angular.module('myApp', ['ionic']);
+    myApp.controller("FirstController", ["$scope", function ($scope) { //监察手机号    
+        $scope.isDisabled = true;
+        $scope.mobileNum = "";
+        $scope.mobileVal = function () {
+            return $scope.mobileNum;
+        };
+        $scope.$watch($scope.mobileVal, function (newValue, oldValue) {
+            var regex = /^(13[0-9]|14[0-9]|15[0-9]|17[0-9]|18[0-9])\d{8}$/;
+            if (regex.test(newValue)) {
+                $scope.isDisabled = false;
+            } else {
+                $scope.isDisabled = true;
+            }
+        }); //监察验证码    
+        $scope.isSubmitted = true;
+        $scope.codeNum = "";
+        $scope.codeVal = function () {
+            return $scope.codeNum;
+        };
+        $scope.$watch($scope.codeVal, function (newValue, oldValue) {
+            if (newValue.length == 4) {
+                $scope.isSubmitted = false;
+            } else {
+                $scope.isSubmitted = true;
+            }
+        });
+    }]);
+
+</script>
+</body>
+</html> -->
+
+<!-- 
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>angularJs</title>
+    <script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+    <h2>验证实例</h2>
+    <form ng-app="myApp" ng-controller="validateCtrl" name="myForm" novalidate>
+        <p>用户名:<input type="text" name="user" ng-model="user" required><span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid"><span
+                    ng-show="myForm.user.$error.required">用户名是必须的。</span></span></p>
+        <p>邮 箱:<input type="email" name="email" ng-model="email" required><span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid"><span
+                    ng-show="myForm.email.$error.required">邮箱是必须的。</span><span ng-show="myForm.email.$error.email">非法的邮箱地址。</span></span></p>
+        <p><input type="submit" ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||  myForm.email.$dirty && myForm.email.$invalid"></p>
+    </form>
+
+    
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('validateCtrl', function ($scope) {
+            $scope.user = 'John Doe';
+            $scope.email = 'john.doe@gmail.com';
+        });
+    </script>
+</body>
+
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html ng-app="myTest">
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+    <script src="JavaScript6-10/js/min/angular.js"> </script>
+    <style type="text/css">
+        body {
+            padding-top: 30px;
+        }
+    </style>
+</head>
+
+<body ng-controller="MyController">
+    <div>
+        <form name="myForm">
+            <div>
+                <div>
+                    <label>1.必填项</label>
+                </div>
+                <div>
+                    <input type="text" required ng-model='user.name' />
+
+                </div>
+            </div>
+            <!-- <div class="form-group has-feedback">
+     <div class="col-md-4">
+      <label for="minlength">2.最小长度=5</label>
+     </div>
+     <div class="col-md-8">
+      <input type="text" id="minlength" name="minlength" ng-minlength="5" ng-model="user.minlength" class="form-control" />
+      <span class="glyphicon glyphicon-ok form-control-feedback"
+        ng-show="myForm.minlength.$dirty && myForm.minlength.$valid"></span>
+     </div>
+    </div>
+    <div class="form-group has-feedback">
+     <div class="col-md-4">
+      <label for="maxlength">3.最大长度=20</label>
+     </div>
+     <div class="col-md-8">
+      <input type="text" id="maxlength" name="maxlength" ng-model="user.maxlength" ng-maxlength="20" class="form-control" />
+      <span class="glyphicon glyphicon-ok form-control-feedback"
+        ng-show="myForm.maxlength.$dirty && myForm.maxlength.$valid"></span>
+     </div>
+    </div>
+    <div class="form-group has-feedback">
+     <div class="col-md-4">
+      <label for="pattern">4. 模式匹配</label>
+     </div>
+     <div class="col-md-8">
+      <input type="text" id="pattern" name="pattern" ng-model="user.pattern" ng-pattern="/^[a-zA-Z]*\d$/" class="form-control" />
+      <span class="glyphicon glyphicon-ok form-control-feedback"
+        ng-show="myForm.pattern.$dirty && myForm.pattern.$valid"></span>
+     </div>
+    </div>
+    <div class="form-group has-feedback">
+     <div class="col-md-4">
+      <label for="email">5. 电子邮件</label>
+     </div>
+     <div class="col-md-8">
+      <input type="email" id="email" name="email" ng-model="user.email" class="form-control" />
+      <span class="glyphicon glyphicon-ok form-control-feedback"
+        ng-show="myForm.email.$dirty && myForm.email.$valid"></span>
+     </div>
+    </div>
+    <div class="form-group has-feedback">
+     <div class="col-md-4">
+      <label for="age">6. 数字</label>
+     </div>
+     <div class="col-md-8">
+      <input type="number" id="age" name="age" ng-model="user.age" class="form-control" />
+      <span class="glyphicon glyphicon-ok form-control-feedback"
+        ng-show="myForm.age.$dirty && myForm.age.$valid"></span>
+     </div>
+    </div>
+    <div class="form-group has-feedback">
+     <div class="col-md-4">
+      <label for="url"> 7. URL</label>
+     </div>
+     <div class="col-md-8">
+      <input type="url" id="url" name="url" ng-model="user.url" class="form-control" />
+      <span class="glyphicon glyphicon-ok form-control-feedback"
+        ng-show="myForm.url.$dirty && myForm.url.$valid"></span>
+     </div>
+    </div> -->
+            <!-- 其他表单验证的写法 -->
+</form>
+            <div>
+                <input ng-disabled="myForm.$invalid" type="submit" value="提交" />
+            </div>
+        
+    </div>
+    <!-- <div class="col-md-12">
+   1.必填项:{{user.name}}  
+   $pristine 【没修改】：{{myForm.name.$pristine }}  
+   $dirty【修改过】：{{myForm.name.$dirty}}  
+   $invalid【验证失败】：{{myForm.name.$invalid}}  
+   $invalid【验证成功】：{{myForm.name.$valid}}  
+   required：{{myForm.name.$error.required}}  
+   <br>
+   2.最小长度=5:{{user.minlength}}
+   $pristine 【没修改】：{{myForm.minlength.$pristine }}  
+   $dirty【修改过】：{{myForm.minlength.$dirty}}  
+   $invalid【验证失败】：{{myForm.minlength.$invalid}}  
+   $invalid【验证成功】：{{myForm.minlength.$valid}}  
+   $error【错误详情】：{{myForm.minlength.$error}}  <br>
+   3.最大长度=20:{{user.maxlength}}
+   $pristine 【没修改】：{{myForm.maxlength.$pristine }}  
+   $dirty【修改过】：{{myForm.maxlength.$dirty}}  
+   $invalid【验证失败】：{{myForm.maxlength.$invalid}}  
+   $invalid【验证成功】：{{myForm.maxlength.$valid}}  
+   $error【错误详情】：{{myForm.maxlength.$error}}  <br>
+   4.模式匹配:{{user.pattern}}
+   $pristine 【没修改】：{{myForm.pattern.$pristine }}  
+   $dirty【修改过】：{{myForm.pattern.$dirty}}  
+   $invalid【验证失败】：{{myForm.pattern.$invalid}}  
+   $invalid【验证成功】：{{myForm.pattern.$valid}}  
+   $error【错误详情】：{{myForm.pattern.$error}}  <br>
+   5.电子邮件:{{user.email}}
+   $pristine 【没修改】：{{myForm.email.$pristine }}  
+   $dirty【修改过】：{{myForm.email.$dirty}}  
+   $invalid【验证失败】：{{myForm.email.$invalid}}  
+   $invalid【验证成功】：{{myForm.email.$valid}}  
+   $error【错误详情】：{{myForm.email.$error}}  <br>
+   6.数字:{{user.age}}
+   $pristine 【没修改】：{{myForm.age.$pristine }}  
+   $dirty【修改过】：{{myForm.age.$dirty}}  
+   $invalid【验证失败】：{{myForm.age.$invalid}}  
+   $invalid【验证成功】：{{myForm.age.$valid}}  
+   $error【错误详情】：{{myForm.age.$error}}  <br>
+   7.URL:{{user.url}}
+   $pristine 【没修改】：{{myForm.url.$pristine }}  
+   $dirty【修改过】：{{myForm.url.$dirty}}  
+   $invalid【验证失败】：{{myForm.url.$invalid}}  
+   $invalid【验证成功】：{{myForm.url.$valid}}  
+   $error【错误详情】：{{myForm.url.$error}}  <br>
+  </div> -->
+
+    <script type="text/javascript">
+        angular.module('myTest', [])
+            .controller('MyController', function ($scope) {
+                // $scope.submitForm = function (isValid) {
+                //     if (!isValid) {
+                //         alert('验证失败');
+                //     }
+                // };
+            });
+    </script>
+
+
+</body>
+
+</html>
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+        <div class="add-box">
+                <div class="add-content-box">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 add-title">
+                                <strong>{{Title}}</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="add-content">
+                        <form name="myType">
+                            <div class="select-type pull-down">
+                                <strong>类&emsp;&emsp;型</strong>
+                                <select ng-model="selectedType" ng-options="x.num as x.type for x in typeItem" ng-click="type()"></select>
+                            </div>
+                            <div class="select-type pull-down" ng-hide="industryHide">
+                                <strong>行&emsp;&emsp;业</strong>
+                                <select ng-model="selectedIndustry" ng-options="x.num as x.industry for x in industryItem"></select>
+                            </div>
+                            <div class="select-type">
+                                <strong>标题名称</strong>
+                                <input type="text" ng-model="title" required>
+                            </div>
+                            <div class="select-type flex">
+                                <strong>说&emsp;&emsp;明</strong>
+                                <div id="editor" ng-model="editor"></div>
+                            </div>
+                            <div class="select-type">
+                                <strong>跳转链接</strong>
+                                <input type="text" ng-model="skipUrl">
+                            </div>
+                        </form>
+                        <form name="myForm">
+                            <strong>配&emsp;&emsp;图</strong>
+                            <input type="file" class="Upload" ngf-select ng-model="picFile" name="file" accept="image/*"
+                                ngf-max-size="2MB" required ngf-model-invalid="errorFile" ng-change="uploadImg()" required>
+                            <i ng-show="myForm.file.$error.maxSize">
+                                {{errorFile.size / 1000000|number:1}}MB: max 2M</i>
+                            <img ng-show="myForm.file.$valid" ngf-thumbnail="picFile" class="thumb">
+                            <img class="thumb" src="{{img}}" alt="" ng-hide="hideImg">
+                        </form>
+                        <table>
+                            <tr>
+                                <th class="th-width">图片名</th>
+                                <th class="th-width">文件大小</th>
+                                <th class="th-width">进度</th>
+                                <th class="th-width">操作</th>
+                                <th class="th-width">操作</th>
+                            </tr>
+                            <tr>
+                                <td>{{name}}</td>
+                                <td>{{size}}</td>
+                                <td>
+                                    <div class="progress" ng-show="picFile.progress >= 0">
+                                        <span class="progress" ng-bind="picFile.progress + '%'"></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span ng-show="picFile.result">上传成功</span>
+                                    <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
+                                </td>
+                                <td class="button-box">
+                                    <button class="button-uploading" ng-disabled="!myForm.$valid" ng-click="uploadPic(picFile)">上传</button>
+                                    <button class="button-delete" ng-disabled="!myForm.$valid" ng-click="delete()">删除</button>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="bottom-button">
+                            <button class="online" ng-disabled="myType.$invalid" ng-click="online()">立即上线</button>
+                            <button class="draft" ng-disabled="myType.$invalid" ng-click="draft()">存为草稿</button>
+                            <button class="off" ng-click="off()">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+    
+</body>
+</html> -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/JavaScript6-10/js/min/angular.js"></script>
+</head>
+<body>
+
+        <form class="form-horizontal" role="form" id="custom_form" name="custom_form" novalidate>
+                <div class="form-group">
+                 <label class="col-sm-2 control-label">多个email</label>
+                 <div class="col-sm-10">
+                  <input multiple-email name="user_email" ng-model="user.email" required class="form-control" placeholder="自定义验证，多个邮箱地址，以“；”或者“;”分割" />
+                  验证通过：{{custom_form.user_email.$valid}}
+                 </div>
+                </div>
+                <div class="form-group text-center">
+                 <input class="btn btn-primary btn-lg" ng-disabled="custom_form.$invalid" type="submit" value="提交" />
+                </div>
+               </form>
+
+
+       <script>       angular.module("myTest", [])
+ .directive('multipleEmail', [function () {
+  return {
+   require: "ngModel",
+   link: function (scope, element, attr, ngModel) {
+    if (ngModel) {
+     var emailsRegexp = /^([a-z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-z0-9-]+(\.[a-z0-9-]+)*[;；]?)+$/i;
+    }
+    var customValidator = function (value) {
+     var validity = ngModel.$isEmpty(value) || emailsRegexp.test(value);
+     ngModel.$setValidity("multipleEmail", validity);
+     return validity ? value : undefined;
+    };
+    ngModel.$formatters.push(customValidator);
+    ngModel.$parsers.push(customValidator);
+   }
+  };
+ }])
+    </script> 
+</body>
+</html> -->

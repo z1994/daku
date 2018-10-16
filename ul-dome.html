@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div ng-app="app" ng-controller="ctrl">
+        <a ui-sref="home">home</a>
+        <a ui-sref="about">about</a>
+        <div ui-view=""></div>
+
+    </div>
+    <script>
+        var app = angular.module('app', ['ui.router']);
+        app.controller('ctrl', function ($scope) {});
+        app.config(function ($stateProvider, $urlRouterProvider) {
+            $stateProvider
+                .state('home', {
+                    url: '/home',
+                    templateUrl: 'html/home.html'
+                })
+                .state('home.list', {
+                    url: '/list',
+                    templateUrl: 'html/homelist.html',
+                    controller: function ($scope) {
+                        $scope.homeArr = ['mapbar_front', 'mapbar', 'front']
+                    }
+                })
+                .state('about', {
+                    url: '/about',
+                    templateUrl: 'html/about.html'
+                })
+                .state('about.list', {
+                    url: '/list',
+                    templateUrl: 'html/aboutlist.html',
+                    controller: function ($scope) {
+                        $scope.aboutArr = ['小菜鸟', '小小鸟', '小小菜']
+                    }
+                })
+        })
+    </script>
+
+
+
+</body>
+
+</html>
