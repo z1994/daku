@@ -1,3 +1,5 @@
+@charset"UTF-8";
+
 img {
     width: 100%;
 }
@@ -103,53 +105,88 @@ body {
     }
 
     .up-td {
-        border-left: solid 1px #000;}
-        #fileId0{
-            font-size: 3rem;
-        }
-        #fileId1{
-            position: absolute;
-            right: 0;
-            width: 4.5rem;
-            top: 13.9rem;
-            opacity: 0;
-        
+        border-left: solid 1px #000;
     }
-.up-main{
-    margin-top: 6rem;
-    border: #000 solid 1px;
-    .title{
+
+    #fileId0 {
+        font-size: 3rem;
+    }
+
+    #fileId1 {
+        position: absolute;
+        right: 0;
+        width: 4.5rem;
+        top: 13.9rem;
+        opacity: 0;
+
+    }
+
+    .up-main {
+        color: red;
+        margin-top: 6rem;
+        border: #000 solid 1px;
+
+        .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 3rem;
+            border: solid #000 1px;
+        }
+
+        .main-content {
+            padding: 3%;
+
+            .up-table {
+                background: #fff;
+
+                .up-tr {
+                    text-align: center;
+                    border: #000 1px solid;
+
+                    .up-td {
+                        border-left: solid 1px #000;
+                    }
+
+
+                    // td{
+                    //     border-left: solid 1px #fff;
+                    .num {
+                        width: 6%;
+                        border-left: solid 1px #000;
+                    }
+
+                    .img {
+                        margin: 0 3%;
+                        width: 27%;
+                        border-left: solid 1px #000;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .footer {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        height: 3rem;
-        border: solid #000 1px;
-    }
-    .main-content{
-        padding: 3%;
-    .up-table {
-        background: #fff;
+        padding: 1rem;
+        width: 70%;
 
-        .up-tr {
+        .page {
+            display: inline-block;
+            width: 3rem;
+            border: solid #999 1px;
+            line-height: 2.5rem;
             text-align: center;
-            border: #000 1px solid;
-            .up-td {
-                border-left: solid 1px #000;}
-            
-
-            // td{
-            //     border-left: solid 1px #fff;
-            .num {
-                width: 6%;
-                border-left: solid 1px #000;
-            }
-
-            .img {
-                margin: 0 3%;
-                width: 27%;
-                border-left: solid 1px #000;
-            }
+        
+        .arrow{
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-left: solid 1px #000;
+            border-bottom: solid 1px #000;
+            transform: rotate(225deg);
         }
-
     }
-}}}
+}}

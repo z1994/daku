@@ -50,6 +50,7 @@ body {
   opacity: 0;
 }
 .main-box .up-main {
+  color: red;
   margin-top: 6rem;
   border: #000 solid 1px;
 }
@@ -81,6 +82,27 @@ body {
   margin: 0 3%;
   width: 27%;
   border-left: solid 1px #000;
+}
+.main-box .footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 70%;
+}
+.main-box .footer .page {
+  display: inline-block;
+  width: 3rem;
+  border: solid #999 1px;
+  line-height: 2.5rem;
+  text-align: center;
+}
+.main-box .footer .page .arrow {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-left: solid 1px #000;
+  border-bottom: solid 1px #000;
+  transform: rotate(225deg);
 }
 
 /*# sourceMappingURL=upload.css.map */

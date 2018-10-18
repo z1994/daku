@@ -11,9 +11,13 @@ angular.module("myApp")
             return '/carrots-admin-ajax/a/article/search';
         },
 
-        get_seek:function(){
-            return '/carrots-admin-ajax/a/article/search'
-        }
+        // get_seek:function(){
+        //     return '/carrots-admin-ajax/a/article/search'
+        //     // ?size=999代表着加载999条数据，默认十条，一页
+        // },
+        // skip:function(){
+        //     return '/carrots-admin-ajax/a/article/search'
+        // }
 
 
         

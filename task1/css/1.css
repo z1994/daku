@@ -3,12 +3,11 @@ body{
     margin: 0;
 }
 .box{
-    display: inline-block;
     float: left;
     margin: .8%;
     width: 31.5%;
     padding-top: 31.5%;
-    background: #333;
+    background: red;
     border-radius: 10%;
 
 }

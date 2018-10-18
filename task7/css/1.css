@@ -32,7 +32,6 @@ body {
     line-height: 0;
     font-size:0;
     vertical-align: middle;
-    -webkit-transform: rotate(45deg);
 }
 .shut:after{
     content:'/';
@@ -40,7 +39,6 @@ body {
     width: 23px;
     height:3px; 
     background: #ffffff;
-    -webkit-transform: rotate(-90deg);
 }
 
 

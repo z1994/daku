@@ -21,21 +21,20 @@ angular.module("myApp")
                 return $http.get(site.get_list(), {
                     //调用site地址方法,后面带()为调用，没有()为引用
                     params: params
-                    //传参
+                    //带请求传参
                 });
             },
-            get_seek:function(params){
-                return $http.get(seek.get_seek(),{
-                    params:params
-                });
-            }
-            
+            // get_seek:function(params){
+            //     return $http.get(seek.get_seek(),{
+            //         params:params
+            //     });
+            // },
+            // skip:function(parms){
+            //     return $http.get(pages.skip(),{
+            //         params:params
+            //     })
+            // }
+
 
         }
-
-
-
-
-
-
     })

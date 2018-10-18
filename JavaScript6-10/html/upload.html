@@ -2,7 +2,7 @@
     <div class="main-box">
         <div class="up">
             <span>标&#8195;&#8195;题</span>
-            <input class="up-input" type="text" ng-model="title1" >
+            <input class="up-input" type="text" ng-model="title1">
             <span>发布时间</span>
             <input class="up-input" type="text" ng-model="start1">
             <span class="line"></span>
@@ -12,10 +12,10 @@
         <div class="up">
             <span>类&#8195;&#8195;型</span>
             <select class="up-input" type="text" ng-model="type1" ng-options="a.num as a.type  for a in names">
-                </select>
+            </select>
             <span>状&#8195;&#8195;态</span>
             <select class="up-input" type="text" ng-model="status1" ng-options="b.num as b.status  for b in industry">
-                </select>
+            </select>
 
             <span>发布者</span>
             <input class="up-input" type="text" ng-model="author1">
@@ -74,6 +74,20 @@
                 </table>
             </div>
 
+        </div>
+
+
+        <div class="footer">
+            <span class="page" ng-click="pagea()" ng-model="a">首页</span>
+            <span class="page" ng-click="pagea()" ng-model="a">1</span>
+            <span class="page" ng-click="pageb()" ng-model="b">2</span>
+            <span class="page" ng-click="pagec()" ng-model="c">3</span>
+            <span class="page" ng-click="paged()" ng-model="d">4</span>
+            <span class="page" ng-click="pagee()" ng-model="e">5</span>
+            <span class="page">....</span>
+            <span class="page">></span>
+            <span class="page">末页</span>
+            <span>{{a}}</span>
         </div>
 
 
