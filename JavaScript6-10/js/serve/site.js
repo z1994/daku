@@ -15,10 +15,18 @@ angular.module("myApp")
         //     return '/carrots-admin-ajax/a/article/search'
         //     // ?size=999代表着加载999条数据，默认十条，一页
         // },
-        // skip:function(){
-        //     return '/carrots-admin-ajax/a/article/search'
-        // }
+        
+        del:function(id){
+            return '/carrots-admin-ajax/a/u/article/'+id;
+        },
 
+        getSelfDetall:function(){
+            if(localStorage["self"]===undefined){
+                return undefined;
+            }else{
+                return JSON.parse(localStorage["self"]);
+            }
+        }
 
         
     }

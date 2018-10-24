@@ -27,10 +27,11 @@
 // })
 
 
-
+var res="admin"
 angular.module("myApp", [])
     .controller("login", function ($scope, $http, $state, beg) {
         // 当用户名输入框和密码输入框获得焦点时清除报错提示
+        
         $scope.value = function () {
             $scope.hint = ""; //清除报错提示
         }
@@ -54,6 +55,7 @@ angular.module("myApp", [])
                         $scope.hint = response.data.message; //提示密码错误
                     } else if (response.data.code == "0") {
                         $scope.hint = "登录成功"; //提示登录成功
+                        localStorage.setItem("key",JSON.stringify(res));
                         $state.go('home'); //路由跳转到主页
                     }
                 })

@@ -2,7 +2,9 @@ var app = angular.module('myApp', []);
 app.controller('myCtrl', function ($scope, $state, $filter, beg, articleContant) {
     $scope.user = false;
 
+    var page_end
     $scope.pages = function () {
+
         // if ($scope.a) {
         //     $state.go($state.$current, {
         //         page: 1
@@ -41,6 +43,7 @@ app.controller('myCtrl', function ($scope, $state, $filter, beg, articleContant)
     }
 
     $scope.pagea = function () {
+        //首页
         $state.go($state.$current, {
             page: 1
         }, {
@@ -80,7 +83,29 @@ app.controller('myCtrl', function ($scope, $state, $filter, beg, articleContant)
         })
     }
 
-  
+
+
+
+    // $scope.del=function(){
+    //     //删除
+    //     $state.go($state.$current, {
+    //         page: 1
+    //     }, {
+    //         reload: true //刷新当前页面
+    //     })
+    // }
+
+
+    // $scope.pageend=function(){
+    //     $state.go($state.$current,{
+    //         page:page_end
+    //     },{
+    //         reload:true
+    //     })
+    // }
+
+
+
 
 
 
@@ -115,15 +140,31 @@ app.controller('myCtrl', function ($scope, $state, $filter, beg, articleContant)
     // .then(function (response) {
 
     beg.get_list(params1).then(function (response) {
+        //调用
         //get向接口请求数据，然后执行函数response，?size=999代表着加载999条数据，默认十条，一页
 
         console.log(response.data.data.articleList)
-        console.log(response.data)
+        console.log(response)
+
+        page_end = Math.ceil((response.data.data.total) / 10)
+        //总数除以10.向上取整，得到页数
+        console.log(response.data.data.total)
+        console.log(page_end)
         // console.log(response.data.data)
         // console.log(response.data.data.articleList)
         //response返回来的数据，里面嵌套着很多其他数值，可以指向性的console出某一项
         $scope.response = response.data.data.articleList
     });
+
+
+    $scope.pageend = function () {
+        //末页跳转，之所以放在这里，是要得要page_end运算后的值
+        $state.go($state.$current, {
+            page: page_end
+        }, {
+            reload: true
+        })
+    }
 
 
     $scope.new = function () {
@@ -188,8 +229,22 @@ app.controller('myCtrl', function ($scope, $state, $filter, beg, articleContant)
             endAt: $scope.end1, //结束时间
             page: 1
         }, {
-            reload: true //刷新当前页面
+            reload: true //带着传参刷新当前页面
         })
+
+    }
+
+    $scope.del = function ($index) {
+        let id = $scope.response[$index].id
+        //获取点击删除的下标的id
+        console.log(id)
+        //打印id 
+        beg.del(id).then(function () {
+            //第一个id是代入对象，因为已经let了，所以不需要$scope
+            $state.reload()//刷新页面
+
+        })
+
 
     }
 

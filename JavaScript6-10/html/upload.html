@@ -54,7 +54,9 @@
                     </tr>
                     <tr class="up-tr" ng-repeat="x in response">
                         <td class="num">{{$index|indexFilter}}</td>
+                        <!-- 序号 -->
                         <td class="img"><img src="{{x.img}}"></td>
+                        <!-- 图片 -->
                         <td class="up-td">{{x.title}}</td>
                         <!-- 标题 -->
                         <td class="up-td">{{x.type|typeFilter}}</td>
@@ -67,8 +69,8 @@
                         <td class="up-td">{{x.status|statusFilter}}</td>
                         <!-- 状态 -->
                         <td class="up-td">
-
-                            <button ng-click="del()">删除</button>
+                            <button >编辑</button>
+                            <button ng-click="del($index)">删除</button>
                         </td>
                     </tr>
                 </table>
@@ -86,7 +88,7 @@
             <span class="page" ng-click="pagee()" ng-model="e">5</span>
             <span class="page">....</span>
             <span class="page">></span>
-            <span class="page">末页</span>
+            <span class="page" ng-click="pageend()">末页</span>
             <span>{{a}}</span>
         </div>
 

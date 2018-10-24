@@ -13,15 +13,18 @@ angular.module("myApp")
                 });
             },
 
-
-
-
             get_list: function (params) {
                 //创建变量名，list获取列表请求
                 return $http.get(site.get_list(), {
                     //调用site地址方法,后面带()为调用，没有()为引用
                     params: params
                     //带请求传参
+                });
+            },
+
+            getSelfDetall:function(params){
+                return $http.post(site.getSelfDetall(),{
+                    params:params
                 });
             },
             // get_seek:function(params){
@@ -34,6 +37,10 @@ angular.module("myApp")
             //         params:params
             //     })
             // }
+            del:function(id){
+                return $http.delete(site.del(id));
+            },
+
 
 
         }
