@@ -5,17 +5,17 @@ body {
     background: url(../img/矩形\ 7.png) no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    // .main {
-    //     position: absolute;
-    //     text-align: center;
-    //     top: 0;
-    //     bottom: 0;
-    //     left: 0;
-    //     right: 0;
-    //     margin: auto;
-    //     width: 33rem;
-    //     height: 24rem;
-    //     background: #d1d4da;
+    main {
+        position: absolute;
+        text-align: center;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 33rem;
+        height: 24rem;
+        background: #d1d4da;
         .title {
             margin: 2rem;
             font-size: 30px;
@@ -61,5 +61,5 @@ body {
             color: #fff;
         }
     }
-// }
+}
 
