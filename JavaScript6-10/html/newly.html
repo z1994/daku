@@ -19,7 +19,11 @@
             </span>
 
             <span class="content">说&#8195;&#8195;明
-                <input type="text" required ng-model='content1'>
+                <!-- <input type="text" required ng-model='content1'> -->
+                <form>
+    
+                    <textarea name="content" style="width: 700px; height: 200px; visibility: hidden; display: none;">KindEditor</textarea>
+                </form>
             </span>
             <span class="content">跳转链接
                 <input type="text" required ng-model='url1'>
@@ -76,7 +80,7 @@
             </tr>
         </table>
 
-        <div class="status" >
+        <div class="status">
             <!-- <button class="stat" ng-click="up()">上线</button>
             <button class="stat" ng-click="draft()">草稿</button> -->
             <input ng-disabled="abc.$invalid" ng-click="immediate1()" ng-model="immediate1" type="submit" value="提交" />

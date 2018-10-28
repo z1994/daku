@@ -1,5 +1,44 @@
+// var editor;
+//         KindEditor.ready(function (K) {
+//             console.log(111)
+//             editor = K.create('textarea[name="content"]', {
+//                 resizeType: 1,
+//                 allowPreviewEmoticons: false,
+//                 allowImageUpload: false,
+//                 items: [
+//                     'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic',
+//                     'underline',
+//                     'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright',
+//                     'insertorderedlist',
+//                     'insertunorderedlist', '|', 'emoticons', 'image', 'link'
+//                 ]
+//             });
+//         });
+
+
+
 angular.module('myApp', ['ngFileUpload'])
     .controller('ss', function ($scope, Upload, $timeout, $http, articleContant) {
+
+        var editor;
+        KindEditor.ready(function (K) {
+            console.log(000)
+            editor = K.create('textarea[name="content"]', {
+                resizeType: 1,
+                allowPreviewEmoticons: false,
+                allowImageUpload: false,
+                items: [
+                    'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic',
+                    'underline',
+                    'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright',
+                    'insertorderedlist',
+                    'insertunorderedlist', '|', 'emoticons', 'image', 'link'
+                ]
+            });
+        });
+
+
+
         $scope.up = function () {
             let cc = 1
             console.log(cc)
@@ -40,10 +79,6 @@ angular.module('myApp', ['ngFileUpload'])
                 // Math.min is to fix IE which reports 200% sometimes
                 file.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
             });
-
-
-
-
 
 
 
@@ -91,21 +126,7 @@ angular.module('myApp', ['ngFileUpload'])
                 // }
             }
 
-            // $scope.submitForm=function(isValid){
-
-            // }
-
-
-
-
-
-            // console.log(response)
-
-
-
-            // $http.post('/carrots-admin-ajax/a/u/article').then();
-            // console.log(123)
-
+            
         }
         $scope.names = articleContant.addType
         //让HTML中的names连接过滤器中的addType
@@ -115,4 +136,22 @@ angular.module('myApp', ['ngFileUpload'])
         //让HTML中的status连接过滤器中的statusltem
 
 
+        
     })
+
+    var editor;
+        KindEditor.ready(function (K) {
+            console.log(000)
+            editor = K.create('textarea[name="content"]', {
+                resizeType: 1,
+                allowPreviewEmoticons: false,
+                allowImageUpload: false,
+                items: [
+                    'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic',
+                    'underline',
+                    'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright',
+                    'insertorderedlist',
+                    'insertunorderedlist', '|', 'emoticons', 'image', 'link'
+                ]
+            });
+        });

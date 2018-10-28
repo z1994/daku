@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Simple Examples</title>
+    <style>
+        form {
+            margin: 0;
+        }
+
+        textarea {
+            display: block;
+        }
+    </style>
+    <link rel="stylesheet" href="JavaScript6-10/kinded/default.css">
+    <script charset="utf-8" src="JavaScript6-10/kinded/kindeditor-all-min.js"></script>
+    <script charset="utf-8" src="JavaScript6-10/kinded/zh-CN.js"></script>
+    <script>
+        var editor;
+        KindEditor.ready(function (K) {
+            editor = K.create('textarea[name="content"]', {
+                resizeType: 1,
+                allowPreviewEmoticons: false,
+                allowImageUpload: false,
+                items: [
+                    'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic',
+                    'underline',
+                    'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright',
+                    'insertorderedlist',
+                    'insertunorderedlist', '|', 'emoticons', 'image', 'link'
+                ]
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+
+    <h3>默认模式</h3>
+    <form>
+        <!-- <div class="ke-container ke-container-default" style="width: 700px;">
+            <div style="display:block;" class="ke-toolbar" unselectable="on"><span class="ke-outline" data-name="fontname"
+                    title="字体" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-fontname"
+                        unselectable="on"></span></span><span class="ke-outline" data-name="fontsize" title="文字大小"
+                    unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-fontsize" unselectable="on"></span></span><span
+                    class="ke-inline-block ke-separator"></span><span class="ke-outline" data-name="forecolor" title="文字颜色"
+                    unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-forecolor" unselectable="on"></span></span><span
+                    class="ke-outline" data-name="hilitecolor" title="文字背景" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-hilitecolor"
+                        unselectable="on"></span></span><span class="ke-outline" data-name="bold" title="粗体(Ctrl+B)"
+                    unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-bold" unselectable="on"></span></span><span
+                    class="ke-outline" data-name="italic" title="斜体(Ctrl+I)" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-italic"
+                        unselectable="on"></span></span><span class="ke-outline" data-name="underline" title="下划线(Ctrl+U)"
+                    unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-underline" unselectable="on"></span></span><span
+                    class="ke-outline" data-name="removeformat" title="删除格式" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-removeformat"
+                        unselectable="on"></span></span><span class="ke-inline-block ke-separator"></span><span class="ke-outline ke-selected"
+                    data-name="justifyleft" title="左对齐" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-justifyleft"
+                        unselectable="on"></span></span><span class="ke-outline" data-name="justifycenter" title="居中"
+                    unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-justifycenter"
+                        unselectable="on"></span></span><span class="ke-outline" data-name="justifyright" title="右对齐"
+                    unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-justifyright"
+                        unselectable="on"></span></span><span class="ke-outline" data-name="insertorderedlist" title="编号"
+                    unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-insertorderedlist"
+                        unselectable="on"></span></span><span class="ke-outline" data-name="insertunorderedlist" title="项目符号"
+                    unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-insertunorderedlist"
+                        unselectable="on"></span></span><span class="ke-inline-block ke-separator"></span><span class="ke-outline"
+                    data-name="emoticons" title="插入表情" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-emoticons"
+                        unselectable="on"></span></span><span class="ke-outline" data-name="image" title="图片"
+                    unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-image" unselectable="on"></span></span><span
+                    class="ke-outline" data-name="link" title="超级链接" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-link"
+                        unselectable="on"></span></span></div>
+            <div style="display: block; height: 160px;" class="ke-edit"><iframe class="ke-edit-iframe" hidefocus="true"
+                    frameborder="0" tabindex="" style="width: 100%; height: 160px;"></iframe><textarea class="ke-edit-textarea"
+                    hidefocus="true" tabindex="" style="width: 100%; height: 160px; display: none;"></textarea></div>
+            <div class="ke-statusbar"><span class="ke-inline-block ke-statusbar-center-icon"></span><span class="ke-inline-block ke-statusbar-right-icon"
+                    style="visibility: hidden;"></span></div>
+        </div> -->
+        <textarea name="content" style="width: 700px; height: 200px; visibility: hidden; display: none;">KindEditor</textarea>
+    </form>
+
+
+</body>
+
+</html>
