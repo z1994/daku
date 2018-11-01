@@ -20,22 +20,22 @@
 angular.module('myApp', ['ngFileUpload'])
     .controller('ss', function ($scope, Upload, $timeout, $http, articleContant) {
 
-        var editor;
-        KindEditor.ready(function (K) {
-            console.log(000)
-            editor = K.create('textarea[name="content"]', {
-                resizeType: 1,
-                allowPreviewEmoticons: false,
-                allowImageUpload: false,
-                items: [
-                    'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic',
-                    'underline',
-                    'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright',
-                    'insertorderedlist',
-                    'insertunorderedlist', '|', 'emoticons', 'image', 'link'
-                ]
-            });
-        });
+        // var editor;
+        // KindEditor.ready(function (K) {
+        //     console.log(000)
+        //     editor = K.create('textarea[name="content"]', {
+        //         resizeType: 1,
+        //         allowPreviewEmoticons: false,
+        //         allowImageUpload: false,
+        //         items: [
+        //             'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic',
+        //             'underline',
+        //             'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright',
+        //             'insertorderedlist',
+        //             'insertunorderedlist', '|', 'emoticons', 'image', 'link'
+        //         ]
+        //     });
+        // });
 
 
 

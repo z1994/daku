@@ -23,14 +23,12 @@ app.controller('res', function ($scope, $http,$state) {
 //        var moduleIDs=Object.keys(res.data.data.role.premissionsSet);
 //        localStorage["permissionsSet"]=JSON.stringify(res.data.data.role.per
 //    }) 
-
-             
-
-
-
+$scope.out=function(){
+    $state.go('login')
+}
 
 
-
+            
     $scope.user = true; //turn代表默认隐藏
     $scope.pull = function () { //点击事件的函数
         $scope.user = !$scope.user;
